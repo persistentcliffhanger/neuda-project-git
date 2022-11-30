@@ -11,9 +11,9 @@
   <body>
 
     
-    <div class="container lg mx-auto overflow-x-hidden bg-white">
+    <!-- <div class="container lg mx-auto overflow-x-hidden bg-white"> -->
 
-
+                    <!--Header-->
       <header class="bg-black text-white">
         <div class="container mx-2 items-center flex justify-between px-2">
           <div class="mt-2"><a class="text-xl  text-white pr-2 font-semibold" href="#"><svg id="Layer_1" data-name="Layer 1"
@@ -62,6 +62,18 @@
             class="fixed top-6 bottom-0 -right-full bg-slate-700 opacity-50 rounded-md w-460 md:auto p-3 md:static transition-all"
           >
             <ul class="md:flex">
+              <!-- search-->
+          <form>   
+              <!-- <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label> -->
+              <div class="relative">
+                  <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                      <!-- <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg> -->
+                  </div>
+                  <input type="search" id="default-search" class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-black focus:ring-white focus:border-white" placeholder="policy number..">
+                  <button type="submit" class="text-white absolute right-2.5 bottom-2.5 border-solid border-stone-200 bg-black hover:bg-white focus:ring-4 focus:outline-none focus:ring-white font-medium rounded-lg text-sm px-4 py-2">Search</button>
+              </div>
+          </form>
+
               <li><a class="block p-3" href="http://">Home</a></li>
               <li><a class="block p-3" href="http://">Home</a></li>
               <li><a class="block p-3" href="http://">New Claim</a></li>
@@ -71,7 +83,7 @@
         </div>
         <script type="text/javascript" src="script.js"></script>
       </header>
-    </div>
+    <!-- </div> -->
 
     <!--Main Content-->
           <!--Pic Div-->
@@ -87,9 +99,12 @@
           </div>
         <!--Form Div-->
         
+        
         <div
           class="w-1/2 h-auto md:block bg-cover bg-center opacity-100 px-6 py-2 mt-2 mb-2">
+          
           <form action="#">
+            
             <div class="grid grid-cols-2 gap-2 justify-center">
               <h2 class="mb-2">Claim Details</h2>
               <div class="md:flex md:justify-between mb-4 mt-10">
@@ -103,7 +118,7 @@
                     type="text"
                     id="policynumber"
                     placeholder="Policy Number"
-                    class="border border-gray-400 py-2 px-3 formcolor"
+                    class="border border-gray-400 py-2 px-3 formcolor max-w-[20rem] rounded"
                   />
                 </div>
                 <div class="mb-4 mt-10">
@@ -116,7 +131,7 @@
                     type="text"
                     placeholder="Name"
                     id="firstname"
-                    class="border border-gray-400 py-2 px-3 formcolor"
+                    class="border border-gray-400 py-2 px-3 formcolor  max-w-[20rem] rounded"
                   />
                 </div>
               </div>
@@ -126,7 +141,7 @@
                 
                   <div class="min-w-fit mb-3 mt-3 pr-5xl:w-96">
                     <select
-                      class="form-select appearance-none block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-1"
+                      class="rounded mt-2 form-select appearance-none block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-1"
                     >
                       <option selected>Type..</option>
                       <option value="1">Property</option>
@@ -137,14 +152,14 @@
                   <!-- Claim Date -->
                   <label
                   for="claimdate"
-                  class="form-label inline-block m-auto text-black smallfont px-2"
+                  class="form-label inline-block m-auto text-black smallfont px-2 rounded"
                   >Date</label>
                 
                 <input
                   type="date"
                   id="claimdate"
                   placeholder="claimdate"
-                  class="border border-gray-400 py-2 px-12 formcolor"
+                  class="border border-gray-400 py-2 px-12 formcolor rounded mt-2"
                 />
                     <!-- Claim Amount-->
                 <div class="mb-4 mt-10 px-2">
@@ -157,7 +172,7 @@
                           type="text"
                           placeholder="Est. Claim $"
                           id="estclaimamount"
-                          class="border border-gray-400 py-2 px-3 formcolor"
+                          class="border border-gray-400 py-2 px-3 formcolor rounded mt-2"
                         />
                       </div>
               </div>
@@ -171,14 +186,14 @@
                       <div class="mb-4 mt-10">
                         <label
                           for="claimreason"
-                          class="form-label inline-block mb-2 text-black smallfont"
+                          class="form-label inline-block mb-2 text-black smallfont rounded"
                           >Reason for Claim</label
                         >
                         <textarea
                           rows="3"
                           placeholder="Name"
                           id="estclaimamount"
-                          class="border border-gray-400 py-2 px-3 formcolor"></textarea>
+                          class="border border-gray-400 py-2 px-3 formcolor rounded  mt-2 "></textarea>
                       </div>
 
               </div>
@@ -196,7 +211,7 @@
                           rows="3"
                           placeholder=""
                           id="estclaimamount"
-                          class="border border-gray-400 py-2 px-3 formcolor"></textarea>
+                          class="border border-gray-400 py-2 px-3 formcolor rounded"></textarea>
                       </div>
 
               </div>
@@ -213,7 +228,7 @@
                     type="text"
                     id="policynumber"
                     placeholder="carmake"
-                    class="border border-gray-400 py-2 px-3 formcolor"
+                    class="border border-gray-400 py-2 px-3 formcolor rounded"
                   />
                 </div>
                 <div class="mb-4 mt-10">
@@ -226,7 +241,7 @@
                     type="text"
                     placeholder="carmodel"
                     id="carmodel"
-                    class="border border-gray-400 py-2 px-3 formcolor"
+                    class="border border-gray-400 py-2 px-3 formcolor rounded"
                   />
                 </div>
                 <div class="mb-4 mt-10">
@@ -239,7 +254,7 @@
                     type="text"
                     placeholder="caryear"
                     id="caryear"
-                    class="border border-gray-400 py-2 px-3 formcolor"
+                    class="border border-gray-400 py-2 px-3 formcolor rounded"
                   />
                 </div>
               </div>
@@ -248,45 +263,20 @@
             </div>
           </form>
         </div>
-    
-
-    <!--Footer-->
-    <!-- <div class="container lg mx-auto overflow-x-hidden bg-white">
+        
+        </div>
+        <div>
     <footer class="bg-black text-white">
       <div class="container mx-auto items-center flex justify-between px-2">
-        <div>QuikClaim</div>
-
-        <button id="toggle-search" class="md:hidden">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-6 h-6"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-            />
-          </svg>
-        </button>
-
-        <nav
-          id="foot"
-          class="fixed top-6 bottom- -right-full bg-black rounded w-460 md:auto p-3 md:static transition-all"
-        >
-          <ul class="md:flex">
+        <div><ul class="md:flex">
             <li><a class="block p-3" href="http://">Home</a></li>
             <li><a class="block p-3" href="http://">Home</a></li>
             <li><a class="block p-3" href="http://">New Claim</a></li>
             <li><a class="block p-3" href="http://">Status</a></li>
-          </ul>
-        </nav>
+          </ul></div>
       </div>
-      <script type="text/javascript" src="script.js"></script>
-    </footer>
-      </div> -->
+      
+</footer>
+</div>
   </body>
 </html>
