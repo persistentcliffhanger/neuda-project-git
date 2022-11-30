@@ -10,11 +10,10 @@
   </head>
   <body>
 
-    
-    <!-- <div class="container lg mx-auto overflow-x-hidden bg-white"> -->
 
-                    <!--Header-->
+        <!-------------------------------------------Header--------------------------------------------------------->
       <header class="bg-black text-white">
+        <!--Header Logo-->
         <div class="container mx-2 items-center flex justify-between px-2">
           <div class="mt-2"><a class="text-xl  text-white pr-2 font-semibold" href="#"><svg id="Layer_1" data-name="Layer 1"
             xmlns="http://www.w3.org/2000/svg" viewBox="0 0 273.98 318.67" height="100px" width="100px">
@@ -38,8 +37,9 @@
             <text class="cls-1" transform="translate(16.81 173.11)">
               <tspan x="0" y="0">IDEMNIFY</tspan>
             </text>
-          </svg></a></div>
-
+          </svg></a>
+        </div>
+          <!--Burger Icon-->
           <button id="toggle" class="md:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -56,25 +56,21 @@
               />
             </svg>
           </button>
-
+          <!--Top Nav Bar-->
           <nav
             id="nav"
             class="fixed top-6 bottom-0 -right-full bg-slate-700 opacity-50 rounded-md w-460 md:auto p-3 md:static transition-all"
           >
             <ul class="md:flex">
-              <!-- search-->
+          <!-- search Box-->
           <form>   
-              <!-- <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label> -->
               <div class="relative">
-                  <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
-                      <!-- <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg> -->
-                  </div>
-                  <input type="search" id="default-search" class="block w-full p-4 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-black focus:ring-white focus:border-white" placeholder="policy number..">
-                  <button type="submit" class="text-white absolute right-2.5 bottom-2.5 border-solid border-stone-200 bg-black hover:bg-white focus:ring-4 focus:outline-none focus:ring-white font-medium rounded-lg text-sm px-4 py-2">Search</button>
+                  <input type="text" id="default-search" class="block w-full p-4 pl-10 text-sm text-black border border-gray-300 rounded-lg bg-black focus:ring-white focus:border-white" placeholder="policy number..">
+                  <button type="submit" class="text-white absolute right-2.5  px-6 bottom-2.5 border-solid border-stone-200 bg-black hover:bg-white focus:ring-4 focus:outline-none focus:ring-white font-medium rounded-lg text-sm py-2">Search</button>
               </div>
           </form>
-
-              <li><a class="block p-3" href="http://">Home</a></li>
+          <!-- Top Nav Links-->
+              
               <li><a class="block p-3" href="http://">Home</a></li>
               <li><a class="block p-3" href="http://">New Claim</a></li>
               <li><a class="block p-3" href="http://">Status</a></li>
@@ -83,9 +79,9 @@
         </div>
         <script type="text/javascript" src="script.js"></script>
       </header>
-    <!-- </div> -->
+    
 
-    <!--Main Content-->
+          <!-------------------------------------------Main--------------------------------------------------------->
           <!--Pic Div-->
           <div class="container flex lg mx-auto overflow-x-hidden bg-white">
             <!--Image Div-->
@@ -97,186 +93,236 @@
                 alt="Picture of reflections on glass building in Vienna"
               />
           </div>
-        <!--Form Div-->
-        
-        
-        <div
-          class="w-1/2 h-auto md:block bg-cover bg-center opacity-100 px-6 py-2 mt-2 mb-2">
-          
-          <form action="#">
-            
-            <div class="grid grid-cols-2 gap-2 justify-center">
-              <h2 class="mb-2">Claim Details</h2>
-              <div class="md:flex md:justify-between mb-4 mt-10">
-                <div class="mb-4 mt-10">
-                  <label
-                    for="policynumber"
-                    class="form-label inline-block m-auto text-black smallfont"
-                    >Policy Number</label
-                  >
-                  <input
-                    type="text"
-                    id="policynumber"
-                    placeholder="Policy Number"
-                    class="border border-gray-400 py-2 px-3 formcolor max-w-[20rem] rounded"
-                  />
-                </div>
-                <div class="mb-4 mt-10">
-                  <label
-                    for="firstname"
-                    class="form-label inline-block mb-2 text-black smallfont"
-                    >Name</label
-                  >
-                  <input
-                    type="text"
-                    placeholder="Name"
-                    id="firstname"
-                    class="border border-gray-400 py-2 px-3 formcolor  max-w-[20rem] rounded"
-                  />
-                </div>
-              </div>
-
-              <!-- Insurance Type Select Box -->
-              <div class="md:flex md:justify-between mb-4 mt-10">
-                
-                  <div class="min-w-fit mb-3 mt-3 pr-5xl:w-96">
-                    <select
-                      class="rounded mt-2 form-select appearance-none block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-1"
+          <!--Form Div-->
+          <div class="w-1/2 h-auto md:block bg-cover bg-center opacity-100 px-6 py-2 mt-2 mb-2">
+            <form action="#">
+              <div class="grid grid-cols-2 gap-2 justify-center">
+                <!--Form Title-->
+                <h2 class="mb-2">Claim Details</h2>
+                <div class="md:flex md:justify-between mb-4 mt-10">
+                  <!--Policy Number-->
+                  <div class="mb-4 mt-10">
+                    <label
+                      for="policynumber"
+                      class="form-label inline-block m-auto text-black smallfont"
+                      >Policy Number</label
                     >
-                      <option selected>Type..</option>
-                      <option value="1">Property</option>
-                      <option value="2">Motor</option>
-                      <option value="3">Pet</option>
-                    </select>
+                    <input
+                      type="text"
+                      id="policynumber"
+                      placeholder="Policy Number"
+                      class="border border-gray-400 py-2 px-3 formcolor max-w-[20rem] rounded"
+                    />
                   </div>
-                  <!-- Claim Date -->
-                  <label
-                  for="claimdate"
-                  class="form-label inline-block m-auto text-black smallfont px-2 rounded"
-                  >Date</label>
-                
-                <input
-                  type="date"
-                  id="claimdate"
-                  placeholder="claimdate"
-                  class="border border-gray-400 py-2 px-12 formcolor rounded mt-2"
-                />
-                    <!-- Claim Amount-->
-                <div class="mb-4 mt-10 px-2">
-                        <label
-                          for="estclaimamount"
-                          class="form-label inline-block mb-2 text-black smallfont px-2"
-                          ></label
-                        >
-                        <input
-                          type="text"
-                          placeholder="Est. Claim $"
-                          id="estclaimamount"
-                          class="border border-gray-400 py-2 px-3 formcolor rounded mt-2"
-                        />
-                      </div>
-              </div>
-
-
-
-
-              <div class="md:flex md:justify-between mb-4 mt-10">
-                    
-
-                      <div class="mb-4 mt-10">
-                        <label
-                          for="claimreason"
-                          class="form-label inline-block mb-2 text-black smallfont rounded"
-                          >Reason for Claim</label
-                        >
-                        <textarea
-                          rows="3"
-                          placeholder="Name"
-                          id="estclaimamount"
-                          class="border border-gray-400 py-2 px-3 formcolor rounded  mt-2 "></textarea>
-                      </div>
-
-              </div>
-
-              <div class="md:flex md:justify-between mb-4 mt-10">
-                    
-
-                      <div class="mb-4 mt-10">
-                        <label
-                          for="claimreason"
-                          class="form-label inline-block mb-2 text-black smallfont"
-                          >Address of Property</label
-                        >
-                        <textarea
-                          rows="3"
-                          placeholder=""
-                          id="estclaimamount"
-                          class="border border-gray-400 py-2 px-3 formcolor rounded"></textarea>
-                      </div>
-
-              </div>
-
-
-              <div class="md:flex md:justify-between mb-2 mt-7">
-                <div class="mb-4 mt-10">
-                  <label
-                    for="carmake"
-                    class="form-label inline-block m-auto text-black smallfont"
-                    >carmake</label
-                  >
-                  <input
-                    type="text"
-                    id="policynumber"
-                    placeholder="carmake"
-                    class="border border-gray-400 py-2 px-3 formcolor rounded"
-                  />
+                  <!--Name-->
+                  <div class="mb-4 mt-10">
+                    <label
+                      for="firstname"
+                      class="form-label inline-block mb-2 text-black smallfont"
+                      >Name</label
+                    >
+                    <input
+                      type="text"
+                      placeholder="Name"
+                      id="firstname"
+                      class="border border-gray-400 py-2 px-3 formcolor  max-w-[20rem] rounded"
+                    />
+                  </div>
                 </div>
-                <div class="mb-4 mt-10">
-                  <label
-                    for="carmodel"
-                    class="form-label inline-block mb-2 text-black smallfont"
-                    >carmodel</label
-                  >
+
+                <!-- Insurance Type Select Box -->
+                <div class="md:flex md:justify-between mb-4 mt-10">
+                  
+                    <div class="min-w-fit mb-3 mt-3 pr-5xl:w-96">
+                      <select
+                        class="rounded mt-2 form-select appearance-none block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-1"
+                      >
+                        <option selected>Type..</option>
+                        <option value="1">Property</option>
+                        <option value="2">Motor</option>
+                        <option value="3">Pet</option>
+                      </select>
+                    </div>
+                    <!-- Claim Date -->
+                    <label
+                    for="claimdate"
+                    class="form-label inline-block m-auto text-black smallfont px-2 rounded"
+                    >Date</label>
+                  
                   <input
-                    type="text"
-                    placeholder="carmodel"
-                    id="carmodel"
-                    class="border border-gray-400 py-2 px-3 formcolor rounded"
+                    type="date"
+                    id="claimdate"
+                    placeholder="claimdate"
+                    class="border border-gray-400 py-2 px-12 formcolor rounded mt-2"
                   />
+                      <!-- Claim Amount-->
+                  <div class="mb-4 mt-10 px-2">
+                          <label
+                            for="estclaimamount"
+                            class="form-label inline-block mb-2 text-black smallfont px-2"
+                            ></label
+                          >
+                          <input
+                            type="text"
+                            placeholder="Est. Claim $"
+                            id="estclaimamount"
+                            class="border border-gray-400 py-2 px-3 formcolor rounded mt-2"
+                          />
+                        </div>
                 </div>
-                <div class="mb-4 mt-10">
-                  <label
-                    for="caryear"
-                    class="form-label inline-block mb-2 text-black smallfont"
-                    >caryear</label
-                  >
-                  <input
-                    type="text"
-                    placeholder="caryear"
-                    id="caryear"
-                    class="border border-gray-400 py-2 px-3 formcolor rounded"
-                  />
-                </div>
+
+
+
+                  <!-- Reason for Claim-->
+                  <div class="md:flex md:justify-between mb-4 mt-10">
+
+                        <div class="mb-4 mt-10">
+                          <label
+                            for="claimreason"
+                            class="form-label inline-block mb-2 text-black smallfont rounded"
+                            >Reason for Claim</label
+                          >
+                          <textarea
+                            rows="3"
+                            placeholder="Name"
+                            id="estclaimamount"
+                            class="border border-gray-400 py-2 px-3 formcolor rounded  mt-2 "></textarea>
+                        </div>
+
+                  </div>
+                    <!-- Property Claim-->
+                    <!-- Address of Property-->
+                  <div class="md:flex md:justify-between mb-4 mt-10">
+                      
+
+                        <div class="mb-4 mt-10">
+                          <label
+                            for="claimreason"
+                            class="form-label inline-block mb-2 text-black smallfont"
+                            >Address of Property</label
+                          >
+                          <textarea
+                            rows="3"
+                            placeholder=""
+                            id="estclaimamount"
+                            class="border border-gray-400 py-2 px-3 formcolor rounded"></textarea>
+                        </div>
+
+                  </div>
+
+                    <!-- Motor Claim-->
+                  <!-- Car Make-->
+                  <div class="md:flex md:justify-between mb-2 mt-7">
+                    <div class="mb-4 mt-10">
+                      <label
+                        for="carmake"
+                        class="form-label inline-block m-auto text-black smallfont"
+                        >carmake</label
+                      >
+                      <input
+                        type="text"
+                        id="policynumber"
+                        placeholder="carmake"
+                        class="border border-gray-400 py-2 px-3 formcolor rounded"
+                      />
+                    </div>
+                    <!-- Car Model-->
+                    <div class="mb-4 mt-10">
+                      <label
+                        for="carmodel"
+                        class="form-label inline-block mb-2 text-black smallfont"
+                        >carmodel</label
+                      >
+                      <input
+                        type="text"
+                        placeholder="carmodel"
+                        id="carmodel"
+                        class="border border-gray-400 py-2 px-3 formcolor rounded"
+                      />
+                    </div>
+                    <!-- Year of Manufacture-->
+                    <div class="mb-4 mt-10">
+                      <label
+                        for="caryear"
+                        class="form-label inline-block mb-2 text-black smallfont"
+                        >caryear</label
+                      >
+                      <input
+                        type="text"
+                        placeholder="caryear"
+                        id="caryear"
+                        class="border border-gray-400 py-2 px-3 formcolor rounded"
+                      />
+                    </div>
+                  </div>
+
+                     <!-- Motor Claim-->
+                  <!-- Car Make-->
+                  <div class="md:flex md:justify-between mb-2 mt-7">
+                    <div class="mb-4 mt-10">
+                      <label
+                        for="carmake"
+                        class="form-label inline-block m-auto text-black smallfont"
+                        >carmake</label
+                      >
+                      <input
+                        type="text"
+                        id="policynumber"
+                        placeholder="carmake"
+                        class="border border-gray-400 py-2 px-3 formcolor rounded"
+                      />
+                    </div>
+                    <!-- Car Model-->
+                    <div class="mb-4 mt-10">
+                      <label
+                        for="carmodel"
+                        class="form-label inline-block mb-2 text-black smallfont"
+                        >carmodel</label
+                      >
+                      <input
+                        type="text"
+                        placeholder="carmodel"
+                        id="carmodel"
+                        class="border border-gray-400 py-2 px-3 formcolor rounded"
+                      />
+                    </div>
+                    <!-- Year of Manufacture-->
+                    <div class="mb-4 mt-10">
+                      <label
+                        for="caryear"
+                        class="form-label inline-block mb-2 text-black smallfont"
+                        >caryear</label
+                      >
+                      <input
+                        type="text"
+                        placeholder="caryear"
+                        id="caryear"
+                        class="border border-gray-400 py-2 px-3 formcolor rounded"
+                      />
+                    </div>
+                  </div>
+
+
               </div>
-              
-              
-            </div>
-          </form>
-        </div>
-        
-        </div>
+            </form>
+          </div>
+      </div>
         <div>
     <footer class="bg-black text-white">
       <div class="container mx-auto items-center flex justify-between px-2">
         <div><ul class="md:flex">
-            <li><a class="block p-3" href="http://">Home</a></li>
-            <li><a class="block p-3" href="http://">Home</a></li>
-            <li><a class="block p-3" href="http://">New Claim</a></li>
-            <li><a class="block p-3" href="http://">Status</a></li>
-          </ul></div>
+            <li><a class="block p-3 smallfont" href="http://">Link1</a></li>
+            <li><a class="block p-3 smallfont" href="http://">Link2</a></li>
+            <li><a class="block p-3 smallfont" href="http://">Link3</a></li>
+            <li><a class="block p-3 smallfont" href="http://">Link4</a></li>
+          </ul>
       </div>
       
 </footer>
+<div class="smallfont text-gray-700 p-4" style="background-color: rgba(0, 0, 0, 0.2)">
+      © 2023 Copyright:
+      <a class="text-gray-800" href="https://tailwind-elements.com/"><em>ASNI</em> Full Stack Training</a>
+    </div></div>
 </div>
   </body>
 </html>
