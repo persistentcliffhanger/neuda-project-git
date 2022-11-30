@@ -137,7 +137,7 @@ Add the correct font size in all browsers.
 */
 
 small {
-  font-size: 80%;
+  font-size: 20%;
 }
 
 /*
@@ -188,7 +188,7 @@ select,
 textarea {
   font-family: inherit;
   /* 1 */
-  font-size: 100%;
+  font-size: 60%;
   /* 1 */
   font-weight: inherit;
   /* 1 */
@@ -940,4 +940,13 @@ video {
   .xl\:bg-\[url\(\'\.\.\/img\/IMG_9584\.jpg\'\)\] {
     background-image: url('../img/IMG_9584.jpg');
   }
+}
+
+.formcolor {
+  --tw-bg-opacity: 1;
+  background-color: rgb(211 211 211 / var(--tw-bg-opacity));
+}
+
+.smallfont {
+  font-size: 0.75rem;
 }

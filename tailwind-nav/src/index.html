@@ -5,78 +5,253 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../dist/output.css" />
-    <title>Document</title>
+    
+    <title>Quick Claim</title>
   </head>
   <body>
+
+    
     <div class="container lg mx-auto overflow-x-hidden bg-white">
-    <header class="bg-black text-white">
-      <div class="container mx-auto items-center flex justify-between px-2">
-        <div>QuikClaim</div>
 
-        <button id="toggle" class="md:hidden">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="w-6 h-6"
+
+      <header class="bg-black text-white">
+        <div class="container mx-2 items-center flex justify-between px-2">
+          <div class="mt-2"><a class="text-xl  text-white pr-2 font-semibold" href="#"><svg id="Layer_1" data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 273.98 318.67" height="100px" width="100px">
+            <defs>
+              <style>
+                .cls-1 {
+                  font-family: MyriadPro-Regular, 'Myriad Pro';
+                  font-size: 38px;
+                  letter-spacing: .3em;
+                }
+
+                .cls-1,
+                .cls-2 {
+                  fill: #ffffffae;
+
+                }
+              </style>
+            </defs>
+            <path class="cls-2"
+              d="M119.81,178.89v-40.09m46.67,40.09v101.11c0,3.26,.85,5.74,2.56,7.44,1.7,1.7,3.74,2.93,6.11,3.67l35.78,10.89v16.67H75.37v-16.67l36-10.89c2.67-.89,4.74-2.15,6.22-3.78,1.48-1.63,2.22-4.07,2.22-7.33v-101.11m46.67-39.73v39.73m-46.67-40.09V38.22c0-3.11-.82-5.48-2.44-7.11-1.63-1.63-3.63-2.81-6-3.56l-36-11.33V0H210.93V16.22l-35.78,11.33c-2.37,.74-4.41,1.97-6.11,3.67-1.7,1.7-2.56,4.04-2.56,7v100.94" />
+            <text class="cls-1" transform="translate(16.81 173.11)">
+              <tspan x="0" y="0">IDEMNIFY</tspan>
+            </text>
+          </svg></a></div>
+
+          <button id="toggle" class="md:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+              />
+            </svg>
+          </button>
+
+          <nav
+            id="nav"
+            class="fixed top-6 bottom-0 -right-full bg-slate-700 opacity-50 rounded-md w-460 md:auto p-3 md:static transition-all"
           >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
-            />
-          </svg>
-        </button>
+            <ul class="md:flex">
+              <li><a class="block p-3" href="http://">Home</a></li>
+              <li><a class="block p-3" href="http://">Home</a></li>
+              <li><a class="block p-3" href="http://">New Claim</a></li>
+              <li><a class="block p-3" href="http://">Status</a></li>
+            </ul>
+          </nav>
+        </div>
+        <script type="text/javascript" src="script.js"></script>
+      </header>
+    </div>
 
-        <nav
-          id="nav"
-          class="fixed top-6 bottom-0 -right-full bg-slate-700 rounded w-460 md:auto p-3 md:static transition-all"
-        >
-          <ul class="md:flex">
-            <li><a class="block p-3" href="http://">Home</a></li>
-            <li><a class="block p-3" href="http://">Home</a></li>
-            <li><a class="block p-3" href="http://">New Claim</a></li>
-            <li><a class="block p-3" href="http://">Status</a></li>
-          </ul>
-        </nav>
-      </div>
-      <script type="text/javascript" src="script.js"></script>
-    </header>
-</div>
+    <!--Main Content-->
+          <!--Pic Div-->
+          <div class="container flex lg mx-auto overflow-x-hidden bg-white">
+            <!--Image Div-->
+            <div
+              class="w-1/2 h-auto hidden md:block lg:w-12/12 bg-cover bg-center opacity-100">
+              <img
+                src="reflect.jpg"
+                class="max-w-full h-auto hidden md:block"
+                alt="Picture of reflections on glass building in Vienna"
+              />
+          </div>
+        <!--Form Div-->
+        
+        <div
+          class="w-1/2 h-auto md:block bg-cover bg-center opacity-100 px-6 py-2 mt-2 mb-2">
+          <form action="#">
+            <div class="grid grid-cols-2 gap-2 justify-center">
+              <h2 class="mb-2">Claim Details</h2>
+              <div class="md:flex md:justify-between mb-4 mt-10">
+                <div class="mb-4 mt-10">
+                  <label
+                    for="policynumber"
+                    class="form-label inline-block m-auto text-black smallfont"
+                    >Policy Number</label
+                  >
+                  <input
+                    type="text"
+                    id="policynumber"
+                    placeholder="Policy Number"
+                    class="border border-gray-400 py-2 px-3 formcolor"
+                  />
+                </div>
+                <div class="mb-4 mt-10">
+                  <label
+                    for="firstname"
+                    class="form-label inline-block mb-2 text-black smallfont"
+                    >Name</label
+                  >
+                  <input
+                    type="text"
+                    placeholder="Name"
+                    id="firstname"
+                    class="border border-gray-400 py-2 px-3 formcolor"
+                  />
+                </div>
+              </div>
 
-<!--Main Content-->
+              <!-- Insurance Type Select Box -->
+              <div class="md:flex md:justify-between mb-4 mt-10">
+                
+                  <div class="min-w-fit mb-3 mt-3 pr-5xl:w-96">
+                    <select
+                      class="form-select appearance-none block w-full px-3 py-1.5 text-base font-normal text-gray-700 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-300 rounded transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-1"
+                    >
+                      <option selected>Type..</option>
+                      <option value="1">Property</option>
+                      <option value="2">Motor</option>
+                      <option value="3">Pet</option>
+                    </select>
+                  </div>
+                  <!-- Claim Date -->
+                  <label
+                  for="claimdate"
+                  class="form-label inline-block m-auto text-black smallfont px-2"
+                  >Date</label>
+                
+                <input
+                  type="date"
+                  id="claimdate"
+                  placeholder="claimdate"
+                  class="border border-gray-400 py-2 px-12 formcolor"
+                />
+                    <!-- Claim Amount-->
+                <div class="mb-4 mt-10 px-2">
+                        <label
+                          for="estclaimamount"
+                          class="form-label inline-block mb-2 text-black smallfont px-2"
+                          ></label
+                        >
+                        <input
+                          type="text"
+                          placeholder="Est. Claim $"
+                          id="estclaimamount"
+                          class="border border-gray-400 py-2 px-3 formcolor"
+                        />
+                      </div>
+              </div>
 
 
 
-<div class="container flex lg mx-auto overflow-x-hidden bg-white">
-<!--Image Div-->
-<div class="w-1/2 h-auto hidden md:block lg:w-12/12 bg-cover bg-center opacity-100">
-    <img src="reflect.jpg" class="max-w-full h-auto hidden md:block" alt="Picture of reflections on glass building in Vienna" />
-</div>
-<!--Form Div-->
-<div class="w-1/2 h-auto md:block lg:w-12/12 bg-cover bg-center opacity-100">Hello</div>
 
-</div>
+              <div class="md:flex md:justify-between mb-4 mt-10">
+                    
+
+                      <div class="mb-4 mt-10">
+                        <label
+                          for="claimreason"
+                          class="form-label inline-block mb-2 text-black smallfont"
+                          >Reason for Claim</label
+                        >
+                        <textarea
+                          rows="3"
+                          placeholder="Name"
+                          id="estclaimamount"
+                          class="border border-gray-400 py-2 px-3 formcolor"></textarea>
+                      </div>
+
+              </div>
+
+              <div class="md:flex md:justify-between mb-4 mt-10">
+                    
+
+                      <div class="mb-4 mt-10">
+                        <label
+                          for="claimreason"
+                          class="form-label inline-block mb-2 text-black smallfont"
+                          >Address of Property</label
+                        >
+                        <textarea
+                          rows="3"
+                          placeholder=""
+                          id="estclaimamount"
+                          class="border border-gray-400 py-2 px-3 formcolor"></textarea>
+                      </div>
+
+              </div>
 
 
+              <div class="md:flex md:justify-between mb-2 mt-7">
+                <div class="mb-4 mt-10">
+                  <label
+                    for="carmake"
+                    class="form-label inline-block m-auto text-black smallfont"
+                    >carmake</label
+                  >
+                  <input
+                    type="text"
+                    id="policynumber"
+                    placeholder="carmake"
+                    class="border border-gray-400 py-2 px-3 formcolor"
+                  />
+                </div>
+                <div class="mb-4 mt-10">
+                  <label
+                    for="carmodel"
+                    class="form-label inline-block mb-2 text-black smallfont"
+                    >carmodel</label
+                  >
+                  <input
+                    type="text"
+                    placeholder="carmodel"
+                    id="carmodel"
+                    class="border border-gray-400 py-2 px-3 formcolor"
+                  />
+                </div>
+                <div class="mb-4 mt-10">
+                  <label
+                    for="caryear"
+                    class="form-label inline-block mb-2 text-black smallfont"
+                    >caryear</label
+                  >
+                  <input
+                    type="text"
+                    placeholder="caryear"
+                    id="caryear"
+                    class="border border-gray-400 py-2 px-3 formcolor"
+                  />
+                </div>
+              </div>
+              
+              
+            </div>
+          </form>
+        </div>
+    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--Footer-->
-<!-- <div class="container lg mx-auto overflow-x-hidden bg-white">
+    <!--Footer-->
+    <!-- <div class="container lg mx-auto overflow-x-hidden bg-white">
     <footer class="bg-black text-white">
       <div class="container mx-auto items-center flex justify-between px-2">
         <div>QuikClaim</div>
@@ -112,8 +287,6 @@
       </div>
       <script type="text/javascript" src="script.js"></script>
     </footer>
-</div> -->
-
-
+      </div> -->
   </body>
 </html>
