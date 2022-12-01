@@ -40,3 +40,16 @@
     transform: rotate(360deg);
   }
 }
+
+.cls-1 {
+  font-family: MyriadPro-Regular, 'Myriad Pro';
+  font-size: 38px;
+  letter-spacing: .3em;
+}
+
+.cls-1,
+.cls-2 {
+  fill: #ffffffae;
+
+}
+
