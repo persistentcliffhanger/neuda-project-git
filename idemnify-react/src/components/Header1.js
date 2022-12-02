@@ -1,16 +1,14 @@
 //import logo from "./logo.svg";
 import { useState } from "react";
-import Tog from "../script.js";
+// import Tog from "../script.js";
 
 function Header1() {
-    const fixedstyles = `fixed top-6 bottom-0 bg-black opacity-100 rounded-md w-460 md:auto mr:0 p-3 md:static transition-all`;
-    const [burgervisable,setvisable] = useState(false);
+  const fixedstyles = `fixed top-6 bottom-0 bg-black opacity-100 rounded-md w-460 md:auto mr:0 p-3 md:static transition-all`;
+  const [burgervisable, setvisable] = useState(false);
 
-
-    const toggleburger = () => {
-        setvisable(!burgervisable);
-
-    }
+  const toggleburger = () => {
+    setvisable(!burgervisable);
+  };
 
   return (
     <div>
@@ -57,7 +55,7 @@ function Header1() {
               </a>
             </div>
 
-            {/* <button onClick={toggleburger} id="toggle" className="md:hidden">
+            <button onClick={toggleburger} id="toggle" className="md:hidden">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -72,7 +70,7 @@ function Header1() {
                   d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
                 />
               </svg>
-            </button> */}
+            </button>
 
             <nav
               id="nav"
