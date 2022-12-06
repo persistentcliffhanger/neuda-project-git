@@ -87,13 +87,13 @@ function Newquikclaim() {
   return (
     <div className="Newquikclaim">
       <div className="container flex lg mx-auto overflow-x-hidden bg-white">
-        <div className="w-1/2 h-auto hidden md:block lg:w-12/12 bg-cover bg-center opacity-50">
+        <div className="w-1/2 h-auto hidden md:block bg-cover bg-center opacity-50 mt-10">
           <img src={reflect} alt="pic" />
         </div>
 
-        <div className="w-1/2 h-auto md:block bg-cover bg-center opacity-100 px-6 py-2 mt-2 mb-2">
+        <div className="w-1/2 h-auto md:block bg-cover bg-center sm:w-full opacity-100 px-6 py-2 mt-0">
           <div
-            className="h-screen flex flex-col 
+            className=" flex flex-col 
                     items-center justify-center"
           >
             <p className="text-black font-bold text-xl mb-3">New Quikclaim</p>

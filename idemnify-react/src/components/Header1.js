@@ -1,6 +1,6 @@
-//import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import { useState } from "react";
-// import Tog from "../script.js";
+//import Tog from "../script.js";
 
 function Header1() {
   const fixedstyles = `fixed top-6 bottom-0 bg-black opacity-100 rounded-md w-460 md:auto mr:0 p-3 md:static transition-all`;
