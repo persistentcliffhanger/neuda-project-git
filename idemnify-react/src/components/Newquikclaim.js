@@ -3,6 +3,32 @@ import reflect from "./reflect.jpg";
 import { useEffect, useState } from "react";
 
 function Newquikclaim() {
+  const [addinformation, setAddinformation] = useState(0);
+
+  const setinformation = () => {
+    setAddinformation(1);
+  };
+  const addinfo = () => {
+    if (addinformation === 0) {
+      return <div></div>;
+    } else if (addinformation === 1) {
+      return (
+        <>
+          <div id="addinfo">
+            <input
+              aria-label="Further Information"
+              type="text"
+              placeholder="Further Information"
+              className="text-sm text-gray-base w-full mt-10 mr-3 
+                              py-5 px-4 h-2 border border-gray-200 
+                              rounded"
+            />
+          </div>
+        </>
+      );
+    }
+  };
+
   const [insurancetype, setinsurancetype] = useState("");
   const insurancepolicytype = () => {
     if (insurancetype === "property") {
@@ -161,37 +187,12 @@ function Newquikclaim() {
               ></textarea>
               {insurancepolicytype()};
               <button
-                type="submit"
+                onClick={() => setinformation()}
                 className="bg-gray-600 text-white hover:bg-gray-400 w-1/2 mt-4"
               >
                 Add Further Information
               </button>
-              <div id="addinfo">
-                <input
-                  aria-label="Further Information"
-                  type="text"
-                  placeholder="Further Information"
-                  className="text-sm text-gray-base w-full mt-10 mr-3 
-                              py-5 px-4 h-2 border border-gray-200 
-                              rounded"
-                />
-                <input
-                  aria-label="Enter the Breed of Animal"
-                  type="text"
-                  placeholder="Further Information2"
-                  className="text-sm text-gray-base w-full mt-2 mr-3 
-                              py-5 px-4 h-2 border border-gray-200 
-                              rounded"
-                />
-
-                <input
-                  aria-label="Enter the policy holders name"
-                  type="date"
-                  id="claimdate"
-                  placeholder="claimdate"
-                  class="border border-gray-200 py-2 px-12 text-gray-400 rounded mt-2 w-full"
-                />
-              </div>
+              {() => addinfo()}
               <button
                 type="submit"
                 className="bg-black text-white hover:bg-gray-600 w-full mt-4"

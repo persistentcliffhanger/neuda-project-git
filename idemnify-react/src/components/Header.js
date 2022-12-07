@@ -2,7 +2,7 @@
 import { useState } from "react";
 //import Tog from "../script.js";
 
-function Header1() {
+function Header() {
   const fixedstyles = `fixed top-6 bottom-0 bg-black opacity-100 rounded-md w-460 md:auto mr:0 p-3 md:static transition-all`;
   const [burgervisable, setvisable] = useState(false);
 
@@ -12,7 +12,7 @@ function Header1() {
 
   return (
     <div>
-      <div className="Header1">
+      <div className="Header">
         <header className="bg-black text-white">
           <div className="container mx-2 items-center flex justify-between px-2">
             <button onClick={toggleburger} id="toggle" className="md:hidden">
@@ -72,7 +72,7 @@ function Header1() {
                       <input
                         type="text"
                         id="default-search"
-                        className="block w-full p-4 pl-10 text-sm text-black border border-gray-300 rounded-lg bg-black focus:ring-white focus:border-white"
+                        className="block w-full p-4 pl-10 text-sm text-white border border-gray-300 rounded-lg bg-black focus:ring-white focus:border-white"
                         placeholder="policy number.."
                       ></input>
                       <button
@@ -117,4 +117,4 @@ function Header1() {
   );
 }
 
-export default Header1;
+export default Header;
