@@ -6,6 +6,7 @@ import Claimsrow from "./claimsrow.js";
 
 const ClaimsTable = (props) => {
   const [claim, setClaims] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
 
   useEffect(() => {
