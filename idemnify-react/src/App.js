@@ -3,24 +3,26 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
 import Newquikclaim from "./components/Newquikclaim";
-import Menu from "./components/Menu";
+// import Menu from "./components/Menu";
 import Search from "./components/Search";
 // import Footer from "./components/Footer";
 // import ClaimsTable from "./components/Claimstable";
 import FindClaimsPage from "./components/FindClaimsPage";
 
 import Landing from './components/Landing';
+import ClaimsTable from "./components/Claimstable";
 
 function App() {
   const [searchTerm, setSearchTerm] = useState("");
 
   return (
     <div>
-      <Header />
+      {/* <Header /> */}
       <BrowserRouter>
-        <Menu />
+        <Header />
         <Routes>
           <Route path="/newquikclaim" element={<Newquikclaim />} />
+          <Route path="/claimstable" element={<ClaimsTable />} />
           <Route
             path="/find"
             element={

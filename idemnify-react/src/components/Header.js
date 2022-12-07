@@ -1,5 +1,7 @@
+import { Link, NavLink } from "react-router-dom";
 // import logo from "./logo.svg";
 import { useState } from "react";
+import Menu from "./Menu";
 import Search from "./Search";
 //import Tog from "../script.js";
 
@@ -86,42 +88,42 @@ function Header() {
                   </form>
                 </li>
 
-
-
+                <li>{/* <Search /> */}</li>
 
                 <li>
-                  {/* <Search /> */}
-
-
-
+                  <h1>
+                    <Link
+                      to="/"
+                      className="block p-3 hover:text-white text-gray-500"
+                    >
+                      Home
+                    </Link>
+                  </h1>
                 </li>
-
-
                 <li>
-                  <a
+                  <NavLink
+                    to="/newquikclaim"
                     className="block p-3 hover:text-white text-gray-500"
-                    href="http://"
                   >
-                    Home
-                  </a>
+                    New QuikClaim
+                  </NavLink>
                 </li>
                 <li>
-                  <a
+                  <NavLink
+                    to="/claimstable"
                     className="block p-3 hover:text-white text-gray-500"
-                    href="http://"
                   >
-                    New Claim
-                  </a>
+                    Claims
+                  </NavLink>
                 </li>
                 <li>
-                  <a
+                  <NavLink
+                    to="/landing"
                     className="block p-3 hover:text-white text-gray-500"
-                    href="http://"
                   >
-                    Status
-                  </a>
+                    Landing
+                  </NavLink>
                 </li>
-                
               </ul>
             </nav>
           </div>
