@@ -14,8 +14,8 @@ function App() {
       
       <Header1 />
       
-      <ClaimsTable />
-      {/* <Newquikclaim /> */}
+      {/* <ClaimsTable /> */}
+      {<Newquikclaim /> }
       <Footer />
     </div>
   );

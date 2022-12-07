@@ -882,9 +882,9 @@ export const Claimdata = () => {
     });
   };
 
-  export const getAllPaymentsForOrderId = (orderId) => {
+  export const getAllClaimsForPolicyNumber= (policy_number) => {
     return axios({
-      url: "http://localhost:8080/api/payment?order=" + orderId,
+      url: "http://localhost:8080/api/payment?order=" + policy_number,
       method: "GET",
       headers: { Accept: "application/json" },
     });
@@ -902,15 +902,15 @@ export const Claimdata = () => {
   //add transaction:  POST /api/payment
   //update            PUT /api/payment/142645
 
-  export const addNewClaim = (payment) => {
+  export const addNewClaim = (claim) => {
     return axios({
-      url: "http://localhost:8080/api/payment",
+      url: "http://localhost:8080/api/claim",
       method: "POST",
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json",
       },
-      data: payment,
+      data: claim,
     });
   };
 

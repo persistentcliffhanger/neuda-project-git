@@ -1,8 +1,10 @@
+import { useReducer, useState } from "react";
+import { addNewClaim } from "./data/data.js";
+
 import reflect from "./reflect.jpg";
 
-import { useEffect, useState } from "react";
-
-function Newquikclaim() {
+const Newquikclaim = () => {
+  const [message, setMessage] = useState("");
   const [addinformation, setAddinformation] = useState(0);
 
   const setinformation = () => {
@@ -109,6 +111,49 @@ function Newquikclaim() {
       );
     }
   };
+  const initialNewClaimState = {
+    policy_number: "",
+    claim_type: "",
+    claim_date: new Date().toISOString().slice(0, 10),
+    est_claim_amt: "0",
+    address: "",
+    vehicle_make: "",
+    vehicle_model: "",
+    vehicle_year: 1900,
+    pet_type: "",
+    pet_breed: "",
+    claim_description: "",
+    claim_reason: "",
+    claim_status: "",
+  };
+
+  const formReducer = (state, data) => {
+    return { ...state, [data.field]: data.value };
+  };
+
+  const [newClaim, dispatch] = useReducer(formReducer, initialNewClaimState);
+
+  const handleChange = (event) => {
+    dispatch({ field: event.target.id, value: event.target.value });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setMessage("Saving...");
+    addNewClaim(newClaim)
+      .then((response) => {
+        if (response.status === 200) {
+          setMessage("New transaction added with id " + response.data.id);
+        } else {
+          setMessage(
+            "Something went wrong - status code was " + response.status
+          );
+        }
+      })
+      .catch((error) => {
+        setMessage("Something went wrong - " + error);
+      });
+  };
 
   return (
     <div className="Newquikclaim">
@@ -124,10 +169,13 @@ function Newquikclaim() {
           >
             <p className="text-black font-bold text-xl mb-3">New Quikclaim</p>
 
-            <form>
+            <form className="addTransactionsForm" onSubmit={handleSubmit}>
               <input
                 aria-label="Enter the policy number"
                 type="text"
+                id="policy"
+                value={addNewClaim.policy_number}
+                onChange={handleChange}
                 placeholder="Policy Number"
                 className="text-sm text-gray-base w-full 
                               mr-3 py-5 px-4 h-2 border 
@@ -135,7 +183,10 @@ function Newquikclaim() {
               />
               <input
                 aria-label="Enter the policy holders name"
-                type="password"
+                type="text"
+                id="name"
+                value={addNewClaim.customer_name}
+                onChange={handleChange}
                 placeholder="Policy holders name"
                 className="text-sm text-gray-base w-full mr-3 
                               py-5 px-4 h-2 border border-gray-200 
@@ -144,6 +195,8 @@ function Newquikclaim() {
               <select
                 class="rounded mt-2 form-select appearance-none block w-full px-3 py-1.5 mb-2 text-base font-normal text-gray-400 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-200 transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-1"
                 onChange={(event) => setinsurancetype(event.target.value)}
+                id="name"
+                value={insurancetype}
               >
                 <option selected>Claim Type..</option>
                 <option value="property">Property</option>
@@ -199,12 +252,13 @@ function Newquikclaim() {
               >
                 Create
               </button>
+              <div>{message}</div>
             </form>
           </div>
         </div>
       </div>
     </div>
   );
-}
+};
 
 export default Newquikclaim;

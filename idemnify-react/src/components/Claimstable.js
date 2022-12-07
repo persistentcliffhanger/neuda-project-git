@@ -1,17 +1,103 @@
 import "./data/data.js";
 import "../Claims.css";
 import { useEffect, useState } from "react";
-import { Claimdata } from "./data/data.js";
+import { Claimdata, getAllClaimsForPolicyNumber } from "./data/data.js";
 import Claimsrow from "./claimsrow.js";
+// import { useSearchParams } from "react-router-dom";
+// import { getAllClaimsForPolicyNumber } from "../data/data";
 
 const ClaimsTable = (props) => {
   const [claim, setClaims] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  // const [searchParams, setSearchParams] = useSearchParams();
 
 
   useEffect(() => {
-    loadClaim("property");
+    loadClaim();
   }, []);
+
+
+
+
+
+useEffect(() => {
+  if (props.searchTerm !== "") {
+    setIsLoading(true);
+    getAllClaimsForPolicyNumber(props.searchTerm)
+      .then((response) => {
+        setClaims(response.data);
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        console.log("something went wrong", error);
+      });
+  }
+}, [props.searchTerm]);
+
+// const [uniqueCountries, setUniqueCountries] = useState([]);
+
+// const loadCountries = () => {
+//   getCountries()
+//     .then((response) => {
+//       if (response.status === 200) {
+//         setUniqueCountries(response.data);
+//         setIsLoading(false);
+//       } else {
+//         console.log("something went wrong");
+//       }
+//     })
+//     .catch((error) => {
+//       console.log("something went wrong", error);
+//     });
+// };
+
+// const loadData = (country) => {
+//   getAllPaymentsForCountry(country)
+//     .then((response) => {
+//       if (response.status === 200) {
+//         setIsLoading(false);
+//         setPayments(response.data);
+//       } else {
+//         console.log("something went wrong", response.status);
+//       }
+//     })
+//     .catch((error) => {
+//       console.log("something went wrong", error);
+//     });
+// };
+
+//debugger;
+
+// const [selectedCountry, setSelectedCountry] = useState("");
+
+// useEffect(() => {
+//   const country = searchParams.get("country");
+//   if (country !== selectedCountry) {
+//     setSelectedCountry(country);
+//     loadData(country);
+//   }
+// }, []);
+
+// const changeCountry = (event) => {
+//   const country = event.target.value;
+//   setSelectedCountry(country);
+//   setIsLoading(true);
+//   loadData(country);
+//   setSearchParams({ country: country });
+// };
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   const claimdata = Claimdata();
 
