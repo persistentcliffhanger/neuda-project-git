@@ -1,5 +1,5 @@
-import Search from "Search";
-import Claimstable from "Claimstable";
+import Search from "./Search";
+import Claimstable from "./Claimstable";
 import { useParams } from "react-router-dom";
 import { useEffect } from "react";
 

@@ -3,7 +3,7 @@ import "../Claims.css";
 import { useEffect, useState } from "react";
 import { Claimdata, getAllClaimsForPolicyNumber } from "./data/data.js";
 import Claimsrow from "./claimsrow.js";
-// import { useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 // import { getAllClaimsForPolicyNumber } from "../data/data";
 
 const ClaimsTable = (props) => {

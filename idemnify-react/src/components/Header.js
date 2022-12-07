@@ -1,5 +1,6 @@
 // import logo from "./logo.svg";
 import { useState } from "react";
+import Search from "./Search";
 //import Tog from "../script.js";
 
 function Header() {
@@ -84,6 +85,18 @@ function Header() {
                     </div>
                   </form>
                 </li>
+
+
+
+
+                <li>
+                  {/* <Search /> */}
+
+
+
+                </li>
+
+
                 <li>
                   <a
                     className="block p-3 hover:text-white text-gray-500"
@@ -108,6 +121,7 @@ function Header() {
                     Status
                   </a>
                 </li>
+                
               </ul>
             </nav>
           </div>

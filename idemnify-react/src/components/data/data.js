@@ -853,64 +853,63 @@ export const Claimdata = () => {
       claim_reason:
         "I pulled away from the side of the road glanced at my mother in-law and headed over the embankment  Probably not the best route for family bonding",
       claim_status: "Paid",
-    }
+    },
   ];
-}
-  const headers = new Headers({ Accept: "application/json" });
+};
+const headers = new Headers({ Accept: "application/json" });
 
-  export const getAllClaimsFetchVersion = () => {
-    return fetch("http://localhost:8080/api/payment", {
-      method: "GET",
-      headers: headers,
-    });
-  };
+export const getAllClaimsFetchVersion = () => {
+  return fetch("http://localhost:8080/api/payment", {
+    method: "GET",
+    headers: headers,
+  });
+};
 
-  export const getAllClaimsAxiosVersion = () => {
-    return axios({
-      url: "http://localhost:8080/api/payment",
-      method: "GET",
-      headers: { Accept: "application/json" },
-    });
-  };
+export const getAllClaimsAxiosVersion = () => {
+  return axios({
+    url: "http://localhost:8080/api/payment",
+    method: "GET",
+    headers: { Accept: "application/json" },
+  });
+};
 
-  export const getAllClaimsForType = (country) => {
-    console.log("getallpaymentsforcountry");
-    return axios({
-      url: "http://localhost:8080/api/payment?country=" + country,
-      method: "GET",
-      headers: { Accept: "application/json" },
-    });
-  };
+export const getAllClaimsForType = (country) => {
+  console.log("getallpaymentsforcountry");
+  return axios({
+    url: "http://localhost:8080/api/payment?country=" + country,
+    method: "GET",
+    headers: { Accept: "application/json" },
+  });
+};
 
-  export const getAllClaimsForPolicyNumber= (policy_number) => {
-    return axios({
-      url: "http://localhost:8080/api/payment?order=" + policy_number,
-      method: "GET",
-      headers: { Accept: "application/json" },
-    });
-  };
+export const getAllClaimsForPolicyNumber = (policy_number) => {
+  return axios({
+    url: "http://localhost:8080/api/payment?order=" + policy_number,
+    method: "GET",
+    headers: { Accept: "application/json" },
+  });
+};
 
-  export const getCountries = () => {
-    console.log("getcountries");
-    return axios({
-      url: "http://localhost:8080/api/country",
-      method: "GET",
-      headers: { Accept: "application/json" },
-    });
-  };
+export const getCountries = () => {
+  console.log("getcountries");
+  return axios({
+    url: "http://localhost:8080/api/country",
+    method: "GET",
+    headers: { Accept: "application/json" },
+  });
+};
 
-  //add transaction:  POST /api/payment
-  //update            PUT /api/payment/142645
+//add transaction:  POST /api/payment
+//update            PUT /api/payment/142645
 
-  export const addNewClaim = (claim) => {
-    return axios({
-      url: "http://localhost:8080/api/claim",
-      method: "POST",
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
-      data: claim,
-    });
-  };
-
+export const addNewClaim = (claim) => {
+  return axios({
+    url: "http://localhost:8080/api/claim",
+    method: "POST",
+    headers: {
+      Accept: "application/json",
+      "Content-Type": "application/json",
+    },
+    data: claim,
+  });
+};
