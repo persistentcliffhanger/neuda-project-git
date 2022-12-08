@@ -1,56 +1,44 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 
-const Search = (props) => {
-  
-  const [localSearchTerm, setLocalSearchTerm] = useState("");
-  const [valid, setValid] = useState(true);
-  const [touched, setTouched] = useState(false);
-  const navigate = useNavigate();
+const Search = () => {
+//   const [searchParams, setSearchParams] = useSearchParams();
+  //   const [valid, setValid] = useState(true);
+  //   const [touched, setTouched] = useState(false);
+    const navigate = useNavigate();
+    
 
-  const checkValidity = (value) => {
-    setValid(value.trim().length > 0);
-  };
-
-  const handleChange = (event) => {
-    setTouched(true);
-    setLocalSearchTerm(event.target.value);
-    checkValidity(event.target.value);
-  };
-
-  const doSearch = (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
-    props.setSearchTerm(localSearchTerm);
-    navigate(`/find/${localSearchTerm}`);
-  };
-
-  const clearForm = () => {
-    setLocalSearchTerm("");
-    setTouched(false);
-    setValid(true);
-    props.setSearchTerm("");
+    let params = event.target.search.value;
+      console.log("Params is equal to" + params);
+        navigate("/claimstable?search=" + params);
   };
 
   return (
-    <div className="searchBox">
-      <form onSubmit={doSearch}>
-        <label htmlFor="policynumber">Policy Number</label>
+    // <div className="searchBox">
+    <form onSubmit={handleSubmit}>
+      <div className="relative">
+        {/* <label htmlFor="policynumber">Policy Number</label> */}
         <input
-          onChange={handleChange}
-          value={localSearchTerm}
-          id="policynumber"
+          //   onChange={handleChange}
+          //   value={localSearchTerm}
+          id="search"
           type="text"
-          style={{ border: valid ? "1px solid #000" : "2px solid #f00" }}
+          className="block w-full p-4 pl-10 text-sm text-white border border-gray-300 rounded-lg bg-black focus:ring-white focus:border-white"
+          placeholder="policy number..."
         />
-        <button type="submit" disabled={!valid || !touched}>
+        <button
+          type="submit"
+          className="hover:text-black text-white absolute right-2.5  px-2 bottom-2.5 border-solid border-stone-200 bg-grey hover:bg-white focus:ring-4 focus:outline-none focus:ring-white font-medium rounded-lg text-sm py-2"
+        >
           Search
         </button>
-        <button onClick={clearForm}>Reset</button>
-      </form>
-    </div>
+        
+      </div>
+    </form>
+    // </div>
   );
 };
 
 export default Search;
-
-

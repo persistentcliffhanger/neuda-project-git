@@ -2,14 +2,15 @@ import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
-import Newquikclaim from "./components/Newquikclaim";
+// import Newquikclaim from "./components/Newquikclaim";
+import Home from "./components/Home";
 // import Menu from "./components/Menu";
-import Search from "./components/Search";
-// import Footer from "./components/Footer";
+// import Search from "./components/Search";
+import Footer from "./components/Footer";
 // import ClaimsTable from "./components/Claimstable";
 import FindClaimsPage from "./components/FindClaimsPage";
 
-import Landing from './components/Landing';
+import Landing from "./components/Landing";
 import ClaimsTable from "./components/Claimstable";
 
 function App() {
@@ -21,7 +22,7 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/newquikclaim" element={<Newquikclaim />} />
+          {/* <Route path="/newquikclaim" element={<Newquikclaim />} /> */}
           <Route path="/claimstable" element={<ClaimsTable />} />
           <Route
             path="/find"
@@ -32,20 +33,22 @@ function App() {
               />
             }
           />
-          <Route
-            path="/find/:orderId"
+          {/* <Route
+            path="/find/:policyNumber"
             element={
               <FindClaimsPage
                 searchTerm={searchTerm}
                 setSearchTerm={setSearchTerm}
-              />
-            }
-          />
+              /> */}
+            {/* } */}
+          {/* /> */}
           <Route path="/landing" element={<Landing />} />
+          <Route path="/home" element={<Home />} />
           <Route path="/" element={<h1>Welcome to the Payments system</h1>} />
           <Route path="*" element={<h1>Sorry - that page doesn't exist</h1>} />
         </Routes>
       </BrowserRouter>
+      <Footer />
     </div>
   );
 }

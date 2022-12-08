@@ -1,9 +1,8 @@
 import { Link, NavLink } from "react-router-dom";
 // import logo from "./logo.svg";
 import { useState } from "react";
-import Menu from "./Menu";
+// import Menu from "./Menu";
 import Search from "./Search";
-//import Tog from "../script.js";
 
 function Header() {
   const fixedstyles = `fixed top-6 bottom-0 bg-black opacity-100 rounded-md w-460 md:auto mr:0 p-3 md:static transition-all`;
@@ -69,34 +68,17 @@ function Header() {
               }
             >
               <ul className="md:flex">
-                <li>
-                  <form>
-                    <div className="relative">
-                      <input
-                        type="text"
-                        id="default-search"
-                        className="block w-full p-4 pl-10 text-sm text-white border border-gray-300 rounded-lg bg-black focus:ring-white focus:border-white"
-                        placeholder="policy number.."
-                      ></input>
-                      <button
-                        type="submit"
-                        className="hover:text-black text-white absolute right-2.5  px-2 bottom-2.5 border-solid border-stone-200 bg-grey hover:bg-white focus:ring-4 focus:outline-none focus:ring-white font-medium rounded-lg text-sm py-2"
-                      >
-                        Search
-                      </button>
-                    </div>
-                  </form>
-                </li>
 
-                <li>{/* <Search /> */}</li>
+                <li>{ <Search /> }</li>
 
+                
                 <li>
                   <h1>
                     <Link
-                      to="/"
+                      to="/home"
                       className="block p-3 hover:text-white text-gray-500"
                     >
-                      Home
+                      About
                     </Link>
                   </h1>
                 </li>
