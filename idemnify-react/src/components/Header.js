@@ -82,7 +82,7 @@ function Header() {
                 </li>
                 <li>
                   <NavLink
-                    to="/newquikclaim"
+                    to="/newclaim"
                     className="block p-3 hover:text-white text-gray-500"
                   >
                     New QuikClaim
@@ -90,10 +90,10 @@ function Header() {
                 </li>
                 <li>
                   <NavLink
-                    to="/claimstable"
+                    to="/allclaims"
                     className="block p-3 hover:text-white text-gray-500"
                   >
-                    Claims
+                    All Claims
                   </NavLink>
                 </li>
                 <li>

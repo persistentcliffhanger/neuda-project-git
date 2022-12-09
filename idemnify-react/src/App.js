@@ -10,9 +10,11 @@ import Home from "./components/Home";
 import Footer from "./components/Footer";
 // import ClaimsTable from "./components/Claimstable";
 import FindClaimsPage from "./components/FindClaimsPage";
+import Allclaims from "./components/Allclaims";
 
 import Landing from "./components/Landing";
 import ClaimsTable from "./components/Claimstable";
+import Newclaim from "./components/Newclaim";
 
 function App() {
   const [searchTerm, setSearchTerm] = useState("");
@@ -25,6 +27,7 @@ function App() {
         <Routes>
           {/* <Route path="/newquikclaim" element={<Newquikclaim />} /> */}
           <Route path="/claimstable" element={<ClaimsTable />} />
+          <Route path="/newclaim" element={<Newclaim />} />
           <Route
             path="/find"
             element={
@@ -44,6 +47,7 @@ function App() {
           {/* } */}
           {/* /> */}
           <Route path="/landing" element={<Landing />} />
+          <Route path="/allclaims" element={<Allclaims />} />
           <Route path="/home" element={<Home />} />
           <Route path="/" element={<h1>Welcome to the Payments system</h1>} />
           <Route path="*" element={<Pagenotfound />} />

@@ -1,9 +1,9 @@
 import { useReducer, useState } from "react";
-import { addNewClaim } from "./data/data.js";
+// import { addNewClaim } from "./data/data.js";
 
 import reflect from "./reflect.jpg";
 
-const Newquikclaim = () => {
+const Newclaim = () => {
   const [message, setMessage] = useState("");
   const [addinformation, setAddinformation] = useState(0);
 
@@ -133,27 +133,27 @@ const Newquikclaim = () => {
 
   const [newClaim, dispatch] = useReducer(formReducer, initialNewClaimState);
 
-  const handleChange = (event) => {
-    dispatch({ field: event.target.id, value: event.target.value });
-  };
+  // const handleChange = (event) => {
+  //   dispatch({ field: event.target.id, value: event.target.value });
+  // };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    setMessage("Saving...");
-    addNewClaim(newClaim)
-      .then((response) => {
-        if (response.status === 200) {
-          setMessage("New transaction added with id " + response.data.id);
-        } else {
-          setMessage(
-            "Something went wrong - status code was " + response.status
-          );
-        }
-      })
-      .catch((error) => {
-        setMessage("Something went wrong - " + error);
-      });
-  };
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  //   setMessage("Saving...");
+  //   addNewClaim(newClaim)
+  //     .then((response) => {
+  //       if (response.status === 200) {
+  //         setMessage("New transaction added with id " + response.data.id);
+  //       } else {
+  //         setMessage(
+  //           "Something went wrong - status code was " + response.status
+  //         );
+  //       }
+  //     })
+  //     .catch((error) => {
+  //       setMessage("Something went wrong - " + error);
+  //     });
+  // };
 
   return (
     <div className="Newquikclaim">
@@ -169,13 +169,13 @@ const Newquikclaim = () => {
           >
             <p className="text-black font-bold text-xl mb-3">New Quikclaim</p>
 
-            <form className="addTransactionsForm" onSubmit={handleSubmit}>
+            <form className="addTransactionsForm"> 
               <input
                 aria-label="Enter the policy number"
                 type="text"
                 id="policy"
-                value={addNewClaim.policy_number}
-                onChange={handleChange}
+                // value={addNewClaim.policy_number}
+                // onChange={handleChange}
                 placeholder="Policy Number"
                 className="text-sm text-gray-base w-full 
                               mr-3 py-5 px-4 h-2 border 
@@ -185,8 +185,8 @@ const Newquikclaim = () => {
                 aria-label="Enter the policy holders name"
                 type="text"
                 id="name"
-                value={addNewClaim.customer_name}
-                onChange={handleChange}
+                // value={addNewClaim.customer_name}
+                // onChange={handleChange}
                 placeholder="Policy holders name"
                 className="text-sm text-gray-base w-full mr-3 
                               py-5 px-4 h-2 border border-gray-200 
@@ -261,4 +261,4 @@ const Newquikclaim = () => {
   );
 };
 
-export default Newquikclaim;
+export default Newclaim;
