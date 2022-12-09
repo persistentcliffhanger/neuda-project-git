@@ -13,7 +13,7 @@ function Header() {
   };
 
   return (
-    <div>
+    <div className="sticky top-0">
       <div className="Header">
         <header className="bg-black text-white">
           <div className="container mx-2 items-center flex justify-between px-2">
@@ -68,10 +68,8 @@ function Header() {
               }
             >
               <ul className="md:flex">
+                <li>{<Search />}</li>
 
-                <li>{ <Search /> }</li>
-
-                
                 <li>
                   <h1>
                     <Link

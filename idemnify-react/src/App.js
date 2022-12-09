@@ -2,6 +2,7 @@ import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
+import Pagenotfound from "./components/Pagenotfound";
 // import Newquikclaim from "./components/Newquikclaim";
 import Home from "./components/Home";
 // import Menu from "./components/Menu";
@@ -40,12 +41,12 @@ function App() {
                 searchTerm={searchTerm}
                 setSearchTerm={setSearchTerm}
               /> */}
-            {/* } */}
+          {/* } */}
           {/* /> */}
           <Route path="/landing" element={<Landing />} />
           <Route path="/home" element={<Home />} />
           <Route path="/" element={<h1>Welcome to the Payments system</h1>} />
-          <Route path="*" element={<h1>Sorry - that page doesn't exist</h1>} />
+          <Route path="*" element={<Pagenotfound />} />
         </Routes>
       </BrowserRouter>
       <Footer />

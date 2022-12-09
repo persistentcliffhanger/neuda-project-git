@@ -33,7 +33,7 @@ const ClaimsTable = (props) => {
   return (
     <>
       <div className="flex flex-col items-center justify-center w-full h-full">
-        <table className="table-auto">
+        <table className="table-auto mt-10 mb-10">
           <thead>
             <tr>
               <th className="text-sm font-bold bg-slate-200 text-gray-900 px-6 py-4 text-center hidden lg:table-cell"></th>
@@ -43,7 +43,7 @@ const ClaimsTable = (props) => {
               <th className="text-sm font-bold bg-slate-200 text-gray-900 px-6 py-4 text-center">
                 Name
               </th>
-              <th className="text-sm font-bold bg-slate-200 text-gray-900 px-6 py-4 text-center">
+              <th className="text-sm font-bold bg-slate-200 text-gray-900 px-6 py-4 text-center hidden lg:table-cell">
                 Claim Type
               </th>
               <th className="text-sm font-bold bg-slate-200 text-gray-900 px-6 py-4 text-center hidden lg:table-cell">

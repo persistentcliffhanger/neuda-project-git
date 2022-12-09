@@ -4,7 +4,7 @@ function Footer() {
   return (
     <div className="Footer">
       <footer className="App-footer">
-        <p>
+        <p className="py-2">
           <code>Welcome to Idemnify Insurance</code>
         </p>
         <svg
