@@ -11,6 +11,7 @@ import Footer from "./components/Footer";
 // import ClaimsTable from "./components/Claimstable";
 import FindClaimsPage from "./components/FindClaimsPage";
 import Allclaims from "./components/Allclaims";
+import Claimdetails from "./components/Claimdetails";
 
 import Landing from "./components/Landing";
 import ClaimsTable from "./components/Claimstable";
@@ -22,6 +23,7 @@ function App() {
   return (
     <div>
       {/* <Header /> */}
+    
       <BrowserRouter>
         <Header />
         <Routes>
@@ -47,6 +49,7 @@ function App() {
           {/* } */}
           {/* /> */}
           <Route path="/landing" element={<Landing />} />
+          <Route path="/claimdetails" element={<Claimdetails />} />
           <Route path="/allclaims" element={<Allclaims />} />
           <Route path="/home" element={<Home />} />
           <Route path="/" element={<h1>Welcome to the Payments system</h1>} />

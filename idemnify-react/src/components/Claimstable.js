@@ -5,7 +5,7 @@ import { Claimdata } from "./data/data.js";
 import Claimsrow from "./claimsrow.js";
 import { useSearchParams } from "react-router-dom";
 
-const ClaimsTable = (props) => {
+const ClaimsTable = () => {
   const [claim, setClaims] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
