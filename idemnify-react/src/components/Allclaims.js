@@ -7,19 +7,15 @@ import Claimsrow from "./claimsrow.js";
 
 const Allclaims = (props) => {
   const [claim, setClaims] = useState([]);
-
   const claimdata = Claimdata();
-
+  
   useEffect(() => {
     loadClaim();
   }, []);
 
-
   const loadClaim = () => {
     const claim = claimdata.filter((claim) => {
-      return (
-        claim.claim_type
-      );
+      return claim.claim_type;
     });
     setClaims(claim);
   };

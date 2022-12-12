@@ -3,56 +3,31 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
 import Pagenotfound from "./components/Pagenotfound";
-// import Newquikclaim from "./components/Newquikclaim";
-import Home from "./components/About";
-// import Menu from "./components/Menu";
-// import Search from "./components/Search";
+import About from "./components/About";
 import Footer from "./components/Footer";
-// import ClaimsTable from "./components/Claimstable";
-// import FindClaimsPage from "./components/FindClaimsPage";
 import Allclaims from "./components/Allclaims";
 import Claimdetails from "./components/Claimdetails";
-
 import Landing from "./components/Landing";
 import ClaimsTable from "./components/Claimstable";
 import Newclaim from "./components/Newclaim";
+
+
 
 function App() {
   const [searchTerm, setSearchTerm] = useState("");
 
   return (
     <div>
-      {/* <Header /> */}
-    
       <BrowserRouter>
         <Header />
         <Routes>
-          {/* <Route path="/newquikclaim" element={<Newquikclaim />} /> */}
           <Route path="/claimstable" element={<ClaimsTable />} />
           <Route path="/newclaim" element={<Newclaim />} />
-          {/* <Route
-            path="/find"
-            element={
-              <FindClaimsPage
-                searchTerm={searchTerm}
-                setSearchTerm={setSearchTerm}
-              />
-            }
-          /> */}
-          {/* <Route
-            path="/find/:policyNumber"
-            element={
-              <FindClaimsPage
-                searchTerm={searchTerm}
-                setSearchTerm={setSearchTerm}
-              /> */}
-          {/* } */}
-          {/* /> */}
           <Route path="/landing" element={<Landing />} />
           <Route path="/claimdetails" element={<Claimdetails />} />
           <Route path="/allclaims" element={<Allclaims />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/" element={<h1>Welcome to the Payments system</h1>} />
+          <Route path="/about" element={<About />} />
+          <Route path="/" element={<Landing />} />
           <Route path="*" element={<Pagenotfound />} />
         </Routes>
       </BrowserRouter>

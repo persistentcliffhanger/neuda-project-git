@@ -1,7 +1,9 @@
 import RobCoulter from "./images/RobCoulter-2.jpg";
 import RobsSignature from "./images/RobsSignature.jpg";
 import "../App.css";
-const Home = (props) => {
+
+
+const About = () => {
   return (
     <div>
       <div className="container flex lg mx-auto overflow-x-hidden items-center justify-center bg-white">
@@ -50,4 +52,4 @@ const Home = (props) => {
   );
 };
 
-export default Home;
+export default About;

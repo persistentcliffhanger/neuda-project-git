@@ -71,7 +71,7 @@ function Header() {
                 <li>
                   <h1>
                     <Link
-                      to="/home"
+                      to="/about"
                       className="block p-3 hover:text-white text-gray-500"
                     >
                       About
