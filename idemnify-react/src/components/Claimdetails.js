@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { getAllClaims } from "./data/ClaimData";
-import { Claimdata } from "./data/data.js";
+// import { Claimdata } from "./data/data.js";
 import { useSearchParams } from "react-router-dom";
 
 const Claimdetails = () => {

@@ -1,15 +1,16 @@
-import "./data/data.js";
+// import "./data/data.js";
 import "../Claims.css";
 import { useEffect, useState } from "react";
-import { Claimdata } from "./data/data.js";
+// import { Claimdata } from "./data/data.js";
 import Claimsrow from "./claimsrow.js";
 import { useSearchParams } from "react-router-dom";
+import { getAllClaims } from "./data/ClaimData";
 
 const ClaimsTable = () => {
   const [claims, setClaims] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
-  const claimdata = Claimdata();
+  const claimdata = getAllClaims();
 
   let [searchParams, setSearchParams] = useSearchParams();
 
@@ -23,9 +24,11 @@ const ClaimsTable = () => {
     const searchedClaim = claimdata.filter((eachClaim) => {
       return (
         eachClaim.claim_type.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        eachClaim.claim_status.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        eachClaim.claim_status
+          .toLowerCase()
+          .includes(searchTerm.toLowerCase()) ||
         eachClaim.address.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        eachClaim.policy_number.includes(searchTerm) ||
+        eachClaim.policy_number === +searchTerm ||
         eachClaim.claim_date.includes(searchTerm) ||
         eachClaim.customer_name.toLowerCase().includes(searchTerm.toLowerCase())
       );
