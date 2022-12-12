@@ -6,7 +6,7 @@ import Claimsrow from "./claimsrow.js";
 import { useSearchParams } from "react-router-dom";
 
 const ClaimsTable = () => {
-  const [claim, setClaims] = useState([]);
+  const [claims, setClaims] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
   const claimdata = Claimdata();
@@ -20,14 +20,17 @@ const ClaimsTable = () => {
   }, [searchParams]);
 
   const loadClaim = (searchTerm) => {
-    const claim = claimdata.filter((claim) => {
+    const searchedClaim = claimdata.filter((eachClaim) => {
       return (
-        claim.claim_type.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        claim.claim_status.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        claim.address.toLowerCase().includes(searchTerm.toLowerCase())
+        eachClaim.claim_type.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        eachClaim.claim_status.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        eachClaim.address.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        eachClaim.policy_number.includes(searchTerm) ||
+        eachClaim.claim_date.includes(searchTerm) ||
+        eachClaim.customer_name.toLowerCase().includes(searchTerm.toLowerCase())
       );
     });
-    setClaims(claim);
+    setClaims(searchedClaim);
   };
 
   return (
@@ -58,7 +61,8 @@ const ClaimsTable = () => {
             </tr>
           </thead>
           <tbody>
-            {claim.map((claim, index) => {
+
+            {claims.length >0 && claims.map((claim, index) => {
               return (
                 <Claimsrow
                   key={index}
