@@ -7,9 +7,9 @@ const Claimsrow = (props) => {
 const navigate=useNavigate();
 
   const onRowClick = (props) => {
-    let policy = props.policy_number;
-    console.log("Policy Number ", policy);
-    navigate("/claimdetails?policy=" + policy);
+    let policy_number = props.policy_number;
+    console.log("Policy Number ", policy_number);
+    navigate("/claimdetails?policy_number=" + policy_number);
   };
 
 
