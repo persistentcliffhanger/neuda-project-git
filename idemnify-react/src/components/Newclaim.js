@@ -1,7 +1,7 @@
 import { useReducer, useState } from "react";
 // import { addNewClaim } from "./data/data.js";
 
-import reflect from "./reflect.jpg";
+import reflect from "./images/reflect.jpg";
 
 const Newclaim = () => {
   const [message, setMessage] = useState("");

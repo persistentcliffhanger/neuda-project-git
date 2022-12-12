@@ -4,12 +4,12 @@ import "./App.css";
 import Header from "./components/Header";
 import Pagenotfound from "./components/Pagenotfound";
 // import Newquikclaim from "./components/Newquikclaim";
-import Home from "./components/Home";
+import Home from "./components/About";
 // import Menu from "./components/Menu";
 // import Search from "./components/Search";
 import Footer from "./components/Footer";
 // import ClaimsTable from "./components/Claimstable";
-import FindClaimsPage from "./components/FindClaimsPage";
+// import FindClaimsPage from "./components/FindClaimsPage";
 import Allclaims from "./components/Allclaims";
 import Claimdetails from "./components/Claimdetails";
 
@@ -30,7 +30,7 @@ function App() {
           {/* <Route path="/newquikclaim" element={<Newquikclaim />} /> */}
           <Route path="/claimstable" element={<ClaimsTable />} />
           <Route path="/newclaim" element={<Newclaim />} />
-          <Route
+          {/* <Route
             path="/find"
             element={
               <FindClaimsPage
@@ -38,7 +38,7 @@ function App() {
                 setSearchTerm={setSearchTerm}
               />
             }
-          />
+          /> */}
           {/* <Route
             path="/find/:policyNumber"
             element={

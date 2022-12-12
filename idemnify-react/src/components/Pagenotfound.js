@@ -1,5 +1,3 @@
-import RobCoulter from "./RobCoulter-2.jpg";
-import RobsSignature from "./RobsSignature.jpg";
 import "../App.css";
 const Pagenotfound = (props) => {
   return (

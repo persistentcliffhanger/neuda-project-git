@@ -1,5 +1,5 @@
-import RobCoulter from "./RobCoulter-2.jpg";
-import RobsSignature from "./RobsSignature.jpg";
+import RobCoulter from "./images/RobCoulter-2.jpg";
+import RobsSignature from "./images/RobsSignature.jpg";
 import "../App.css";
 const Home = (props) => {
   return (

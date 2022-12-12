@@ -1,7 +1,5 @@
 import { Link, NavLink } from "react-router-dom";
-// import logo from "./logo.svg";
 import { useState } from "react";
-// import Menu from "./Menu";
 import Search from "./Search";
 
 function Header() {

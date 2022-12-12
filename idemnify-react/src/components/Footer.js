@@ -1,5 +1,3 @@
-// import logo from "./logo.svg";
-// import reflect from "./reflect.jpg";
 function Footer() {
   return (
     <div className="Footer">
