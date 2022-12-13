@@ -33,6 +33,7 @@ const navigate=useNavigate();
         <td className="hidden lg:table-cell text-center">{props.claim_date}</td>
         <td className="lg:table-cell text-center">{props.est_claim_amt}</td>
         <td className="lg:table-cell text-center">{props.claim_status}</td>
+        <td className="lg:table-cell text-center">{props.image_1}</td>
       </tr>
     </>
   );

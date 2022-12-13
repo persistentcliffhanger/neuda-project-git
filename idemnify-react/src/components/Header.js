@@ -1,6 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { useState } from "react";
 import Search from "./Search";
+import info from "./images/icons8-information-25.png";
 
 function Header() {
   const fixedstyles = `fixed top-6 bottom-0 bg-black opacity-100 rounded-md w-460 md:auto mr:0 p-3 md:static transition-all`;
@@ -101,6 +102,20 @@ function Header() {
                   >
                     Landing
                   </NavLink>
+                </li>
+                
+                <li>
+                  <div className="">
+                    <NavLink
+                      to="/purpose" className="">
+                      <a href="" className="block p-3">
+                        <img
+                          src={info}
+                          alt=""
+                          />
+                      </a>
+                    </NavLink>
+                  </div>
                 </li>
               </ul>
             </nav>

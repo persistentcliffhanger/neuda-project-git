@@ -10,6 +10,7 @@ import Claimdetails from "./components/Claimdetails";
 import Landing from "./components/Landing";
 import ClaimsTable from "./components/Claimstable";
 import Newclaim from "./components/Newclaim";
+import Purpose from "./components/Purpose";
 
 
 
@@ -27,6 +28,7 @@ function App() {
           <Route path="/claimdetails" element={<Claimdetails />} />
           <Route path="/allclaims" element={<Allclaims />} />
           <Route path="/about" element={<About />} />
+          <Route path="/purpose" element={<Purpose />} />
           <Route path="/" element={<Landing />} />
           <Route path="*" element={<Pagenotfound />} />
         </Routes>

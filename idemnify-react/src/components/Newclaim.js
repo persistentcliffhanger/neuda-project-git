@@ -133,28 +133,6 @@ const Newclaim = () => {
 
   const [newClaim, dispatch] = useReducer(formReducer, initialNewClaimState);
 
-  // const handleChange = (event) => {
-  //   dispatch({ field: event.target.id, value: event.target.value });
-  // };
-
-  // const handleSubmit = (event) => {
-  //   event.preventDefault();
-  //   setMessage("Saving...");
-  //   addNewClaim(newClaim)
-  //     .then((response) => {
-  //       if (response.status === 200) {
-  //         setMessage("New transaction added with id " + response.data.id);
-  //       } else {
-  //         setMessage(
-  //           "Something went wrong - status code was " + response.status
-  //         );
-  //       }
-  //     })
-  //     .catch((error) => {
-  //       setMessage("Something went wrong - " + error);
-  //     });
-  // };
-
   return (
     <div className="Newquikclaim">
       <div className="container flex lg mx-auto overflow-x-hidden bg-white">
@@ -174,8 +152,6 @@ const Newclaim = () => {
                 aria-label="Enter the policy number"
                 type="text"
                 id="policy"
-                // value={addNewClaim.policy_number}
-                // onChange={handleChange}
                 placeholder="Policy Number"
                 className="text-sm text-gray-base w-full 
                               mr-3 py-5 px-4 h-2 border 
@@ -185,8 +161,6 @@ const Newclaim = () => {
                 aria-label="Enter the policy holders name"
                 type="text"
                 id="name"
-                // value={addNewClaim.customer_name}
-                // onChange={handleChange}
                 placeholder="Policy holders name"
                 className="text-sm text-gray-base w-full mr-3 
                               py-5 px-4 h-2 border border-gray-200 

@@ -76,6 +76,7 @@ const ClaimsTable = () => {
                   est_claim_amt={claim.est_claim_amt}
                   claim_status={claim.claim_status}
                   claim_description={claim.claim_description}
+                  claim_image1={claim.claim_image_1}
                 />
               );
             })}

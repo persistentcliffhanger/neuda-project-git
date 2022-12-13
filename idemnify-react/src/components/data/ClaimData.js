@@ -17,6 +17,7 @@ export const getAllClaims  = () => {
       claim_description: "bent shapeless",
       claim_reason: "I didn’t think the speed limit applied after midnight.",
       claim_status: "Paid",
+      image_1: "https://i.imgur.com/1ZQ3Z0C.jpg",
     },
     {
       policy_number: 233157,
@@ -34,6 +35,8 @@ export const getAllClaims  = () => {
       claim_reason:
         "I pulled away from the side of the road glanced at my mother in-law and headed over the embankment  Probably not the best route for family bonding",
       claim_status: "Quoted",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 47048,
@@ -51,6 +54,8 @@ export const getAllClaims  = () => {
       claim_reason:
         "My car was legally parked as it backed into another vehicle",
       claim_status: "Quoted",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 39426,
@@ -68,6 +73,8 @@ export const getAllClaims  = () => {
       claim_reason:
         "My car was legally parked as it backed into another vehicle",
       claim_status: "Quoted",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 418779,
@@ -85,6 +92,8 @@ export const getAllClaims  = () => {
       claim_reason:
         "To avoid hitting the bumper of the car in front I struck a pedestrian",
       claim_status: "Quoted",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 665584,
@@ -102,6 +111,8 @@ export const getAllClaims  = () => {
       claim_reason:
         "To avoid hitting the bumper of the car in front I struck a pedestrian",
       claim_status: "Paid",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 323654,
@@ -119,6 +130,8 @@ export const getAllClaims  = () => {
       claim_reason:
         "To avoid hitting the bumper of the car in front I struck a pedestrian",
       claim_status: "Pending",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 263037,
@@ -136,6 +149,8 @@ export const getAllClaims  = () => {
       claim_reason:
         "I thought my window was down but I found it was up when I put my head through it",
       claim_status: "Pending",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 869117,
@@ -152,6 +167,8 @@ export const getAllClaims  = () => {
       claim_description: "bent shapeless",
       claim_reason: "I didn’t think the speed limit applied after midnight.",
       claim_status: "Paid",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 353115,
@@ -169,6 +186,8 @@ export const getAllClaims  = () => {
       claim_reason:
         "I told the police that I was not injured but on removing my hat I found that I had a fractured skull",
       claim_status: "Quoted",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 343202,
@@ -186,6 +205,8 @@ export const getAllClaims  = () => {
       claim_reason:
         "I thought my window was down but I found it was up when I put my head through it",
       claim_status: "Paid",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 623874,
@@ -203,6 +224,8 @@ export const getAllClaims  = () => {
       claim_reason:
         "I thought my window was down but I found it was up when I put my head through it",
       claim_status: "Pending",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 226948,
@@ -220,6 +243,8 @@ export const getAllClaims  = () => {
       claim_reason:
         "The other car collided with mine without giving me warning of its intention",
       claim_status: "Quoted",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 476641,
@@ -238,6 +263,8 @@ export const getAllClaims  = () => {
       claim_reason:
         "I told the police that I was not injured but on removing my hat I found that I had a fractured skull",
       claim_status: "Paid",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 209177,
@@ -256,6 +283,8 @@ export const getAllClaims  = () => {
       claim_reason:
         "To avoid hitting the bumper of the car in front I struck a pedestrian",
       claim_status: "Paid",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 127515,
@@ -273,6 +302,8 @@ export const getAllClaims  = () => {
       claim_reason:
         "I thought my window was down but I found it was up when I put my head through it",
       claim_status: "Paid",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 496831,
@@ -290,6 +321,8 @@ export const getAllClaims  = () => {
       claim_reason:
         "I pulled away from the side of the road glanced at my mother in-law and headed over the embankment  Probably not the best route for family bonding",
       claim_status: "Paid",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 299634,
@@ -307,6 +340,8 @@ export const getAllClaims  = () => {
       claim_reason:
         "My car was legally parked as it backed into another vehicle",
       claim_status: "Paid",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 547548,
@@ -324,6 +359,8 @@ export const getAllClaims  = () => {
       claim_reason:
         "I told the police that I was not injured but on removing my hat I found that I had a fractured skull",
       claim_status: "Pending",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 985931,
@@ -342,6 +379,8 @@ export const getAllClaims  = () => {
       claim_reason:
         "The other car collided with mine without giving me warning of its intention",
       claim_status: "Pending",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 111417,
@@ -360,6 +399,8 @@ export const getAllClaims  = () => {
       claim_reason:
         "I pulled away from the side of the road glanced at my mother in-law and headed over the embankment  Probably not the best route for family bonding",
       claim_status: "Pending",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 971604,
@@ -378,6 +419,8 @@ export const getAllClaims  = () => {
       claim_reason:
         "I pulled away from the side of the road glanced at my mother in-law and headed over the embankment  Probably not the best route for family bonding",
       claim_status: "Quoted",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 757223,
@@ -395,6 +438,8 @@ export const getAllClaims  = () => {
       claim_reason:
         "I thought my window was down but I found it was up when I put my head through it",
       claim_status: "Paid",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 175502,
@@ -412,6 +457,8 @@ export const getAllClaims  = () => {
       claim_reason:
         "I pulled away from the side of the road glanced at my mother in-law and headed over the embankment  Probably not the best route for family bonding",
       claim_status: "Pending",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 677402,
@@ -429,6 +476,8 @@ export const getAllClaims  = () => {
       claim_reason:
         "My car was legally parked as it backed into another vehicle",
       claim_status: "Paid",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 350927,
@@ -446,6 +495,8 @@ export const getAllClaims  = () => {
       claim_reason:
         "I told the police that I was not injured but on removing my hat I found that I had a fractured skull",
       claim_status: "Quoted",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 204736,
@@ -463,6 +514,8 @@ export const getAllClaims  = () => {
       claim_reason:
         "I told the police that I was not injured but on removing my hat I found that I had a fractured skull",
       claim_status: "Quoted",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 458642,
@@ -480,6 +533,8 @@ export const getAllClaims  = () => {
       claim_reason:
         "The other car collided with mine without giving me warning of its intention",
       claim_status: "Quoted",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 43531,
@@ -497,6 +552,8 @@ export const getAllClaims  = () => {
       claim_reason:
         "I thought my window was down but I found it was up when I put my head through it",
       claim_status: "Paid",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 264490,
@@ -513,6 +570,8 @@ export const getAllClaims  = () => {
       claim_description: "broken",
       claim_reason: "I didn’t think the speed limit applied after midnight.",
       claim_status: "Quoted",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 463913,
@@ -530,6 +589,8 @@ export const getAllClaims  = () => {
       claim_reason:
         "My car was legally parked as it backed into another vehicle",
       claim_status: "Pending",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 698001,
@@ -547,6 +608,8 @@ export const getAllClaims  = () => {
       claim_reason:
         "I pulled away from the side of the road glanced at my mother in-law and headed over the embankment  Probably not the best route for family bonding",
       claim_status: "Paid",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 985861,
@@ -564,6 +627,8 @@ export const getAllClaims  = () => {
       claim_reason:
         "My car was legally parked as it backed into another vehicle",
       claim_status: "Quoted",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 451384,
@@ -582,6 +647,8 @@ export const getAllClaims  = () => {
       claim_reason:
         "The other car collided with mine without giving me warning of its intention",
       claim_status: "Pending",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 225897,
@@ -600,6 +667,8 @@ export const getAllClaims  = () => {
       claim_reason:
         "The other car collided with mine without giving me warning of its intention",
       claim_status: "Quoted",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 355870,
@@ -617,6 +686,8 @@ export const getAllClaims  = () => {
       claim_reason:
         "The other car collided with mine without giving me warning of its intention",
       claim_status: "Quoted",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 88823,
@@ -634,6 +705,8 @@ export const getAllClaims  = () => {
       claim_reason:
         "My car was legally parked as it backed into another vehicle",
       claim_status: "Pending",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 386678,
@@ -651,6 +724,8 @@ export const getAllClaims  = () => {
         "I started to slow down but the traffic was more stationary than I thought",
       claim_reason: "I didn’t think the speed limit applied after midnight.",
       claim_status: "Pending",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 214498,
@@ -668,6 +743,8 @@ export const getAllClaims  = () => {
       claim_reason:
         "To avoid hitting the bumper of the car in front I struck a pedestrian",
       claim_status: "Paid",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 698123,
@@ -685,6 +762,8 @@ export const getAllClaims  = () => {
       claim_reason:
         "The other car collided with mine without giving me warning of its intention",
       claim_status: "Quoted",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 697473,
@@ -702,6 +781,8 @@ export const getAllClaims  = () => {
         "I started to slow down but the traffic was more stationary than I thought",
       claim_reason: "I didn’t think the speed limit applied after midnight.",
       claim_status: "Quoted",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 89065,
@@ -718,6 +799,8 @@ export const getAllClaims  = () => {
       claim_description: "bent shapeless",
       claim_reason: "I didn’t think the speed limit applied after midnight.",
       claim_status: "Paid",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 118592,
@@ -735,6 +818,8 @@ export const getAllClaims  = () => {
       claim_reason:
         "The other car collided with mine without giving me warning of its intention",
       claim_status: "Quoted",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 318077,
@@ -752,6 +837,8 @@ export const getAllClaims  = () => {
       claim_reason:
         "My car was legally parked as it backed into another vehicle",
       claim_status: "Pending",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 257760,
@@ -769,6 +856,8 @@ export const getAllClaims  = () => {
       claim_reason:
         "I told the police that I was not injured but on removing my hat I found that I had a fractured skull",
       claim_status: "Quoted",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 539975,
@@ -786,6 +875,8 @@ export const getAllClaims  = () => {
       claim_reason:
         "The other car collided with mine without giving me warning of its intention",
       claim_status: "Pending",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 915381,
@@ -803,6 +894,8 @@ export const getAllClaims  = () => {
         "I started to slow down but the traffic was more stationary than I thought",
       claim_reason: "I didn’t think the speed limit applied after midnight.",
       claim_status: "Paid",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 259057,
@@ -820,6 +913,8 @@ export const getAllClaims  = () => {
       claim_reason:
         "To avoid hitting the bumper of the car in front I struck a pedestrian",
       claim_status: "Pending",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 939330,
@@ -836,6 +931,8 @@ export const getAllClaims  = () => {
       claim_description: "bent shapeless",
       claim_reason: "I didn’t think the speed limit applied after midnight.",
       claim_status: "Paid",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
     {
       policy_number: 299674,
@@ -853,6 +950,8 @@ export const getAllClaims  = () => {
       claim_reason:
         "I pulled away from the side of the road glanced at my mother in-law and headed over the embankment  Probably not the best route for family bonding",
       claim_status: "Paid",
+      image_1:
+        "https://images.unsplash.com/photo-1597328290883-50c5787b7c7e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2340&q=80",
     },
   ];
 };
