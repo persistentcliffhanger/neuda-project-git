@@ -295,6 +295,17 @@ const Claimdetails = () => {
                               mr-3 py-5 px-4 h-2 border 
                               border-gray-200 rounded mb-2"
               />
+              <label htmlFor="notes" className="text-xs">
+                Notes
+              </label>
+              <textarea
+                aria-label="State reason for Claim"
+                rows="5"
+                placeholder=""
+                id="claimreason"
+                className="border-4 border-red-200  py-2 px-3 mt-2 formcolor rounded w-full"
+                value=""
+              ></textarea>
               <button
                 type="submit"
                 className="bg-red-400 text-white hover:bg-gray-400 w-full mt-12 mb-12 py-3 rounded font-bold"
