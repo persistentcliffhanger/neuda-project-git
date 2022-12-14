@@ -38,9 +38,39 @@ const Claimdetails = () => {
             className=" flex flex-col 
                     items-center justify-center"
           >
-            <p className="text-black font-bold text-xl mb-3">Claim Details</p>
-
             <form className="addTransactionsForm">
+              <nav classname="">
+                <button
+                  type="submit"
+                  className="bg-black text-white hover:bg-gray-400 w-1/4 mt-4"
+                >
+                  Reject
+                </button>
+                <button
+                  type="submit"
+                  className="bg-black text-white hover:bg-gray-400 w-1/4 mt-4"
+                >
+                  Push
+                </button>
+                <button
+                  type="submit"
+                  className="bg-black text-white hover:bg-gray-400 w-1/4 mt-4 "
+                >
+                  Accept
+                </button>
+                <button
+                  type="submit"
+                  className="bg-black text-white hover:bg-gray-400 w-1/4 mt-4 "
+                >
+                  In Progress
+                </button>
+              </nav>
+              <p
+                className="text-black font-bold text-xl flex flex-col 
+                    items-center justify-center mt-12 mb-12"
+              >
+                Claim Details
+              </p>
               <label htmlFor="policynum" className="text-xs">
                 Policy Number
               </label>
@@ -265,6 +295,12 @@ const Claimdetails = () => {
                               mr-3 py-5 px-4 h-2 border 
                               border-gray-200 rounded mb-2"
               />
+              <button
+                type="submit"
+                className="bg-red-400 text-white hover:bg-gray-400 w-full mt-12 mb-12 py-3 rounded font-bold"
+              >
+                Update
+              </button>
             </form>
             {/* <div className="w-1/2 h-auto hidden md:block bg-cover bg-center opacity-100 mt-10">
               <img src={policy[0].image_1} alt="pic" />
