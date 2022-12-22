@@ -1,5 +1,16 @@
 import React, { useState } from "react";
 function Infotablerows({ rows, tableRowRemove, onValUpdate }) {
+
+  function CTime() {
+    const time = null;
+    const [ctime, setDate] = useState(time);
+  
+    const handelTime = () => {
+      let time = new Date().toLocaleTimeString();
+      setDate(time);
+    };
+  }
+  
   return rows.map((rowsData, index) => {
     const { completed, date, note } = rowsData;
     return (
@@ -42,7 +53,7 @@ function Infotablerows({ rows, tableRowRemove, onValUpdate }) {
         </td>
         <td>
           <button
-            className="bg-red-400 text-white text-sm hover:bg-gray-400 w-1/4 mt-1 mb-1 py-1 px-1 ml-1 rounded font-bold"
+            className="bg-red-400 text-white text-sm hover:bg-gray-400 w-1/4 mt-1 mb-1 ml-40 py-1 px-1 rounded font-bold"
             onClick={() => tableRowRemove(index)}
           >
             X
@@ -75,8 +86,10 @@ function Table() {
   };
   return (
     <>
-      <h1 className="text-center">Tasks</h1>
-      <table className="table-auto w-full mt-10 mb-10 items-center justify-center ">
+      <label htmlFor="notes" className="text-xs">
+        Tasks
+      </label>
+      <table className="table-auto w-full mt-1 mb-10 items-center justify-center ">
         <thead>
           <tr>
             <th className="w-1/4">Completed</th>
@@ -84,7 +97,7 @@ function Table() {
             <th className="w-1/4">Note</th>
             <th className="w-1/4">
               <button
-                className="bg-red-400 text-white text-sm hover:bg-gray-400 w-1/2 mt-12 mb-12 py-3 rounded font-bold"
+                className="bg-gray-600 text-white text-sm hover:bg-gray-400 w-1/2 rounded mt-4"
                 onClick={addRowTable}
               >
                 Add Task

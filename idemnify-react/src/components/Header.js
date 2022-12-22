@@ -32,7 +32,7 @@ function Header() {
                 />
               </svg>
             </button>
-            <div className="mt-2">
+            <div className="hover:animate-pulse mt-2">
               <a className="text-xl text-white pr-2 font-semibold" href="#">
                 <svg
                   id="Layer_1"

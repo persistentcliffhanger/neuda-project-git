@@ -296,6 +296,7 @@ const Claimdetails = () => {
                               mr-3 py-5 px-4 h-2 border 
                               border-gray-200 rounded mb-2"
               />
+              
               <label htmlFor="notes" className="text-xs">
                 Notes
               </label>
@@ -321,7 +322,6 @@ const Claimdetails = () => {
           <Infotablerows />
         </div>
       </div>
-      
     </div>
   );
 };
