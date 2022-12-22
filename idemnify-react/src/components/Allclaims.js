@@ -24,6 +24,11 @@ const Allclaims = (props) => {
   return (
     <>
       <div className="flex flex-col items-center justify-center w-full h-full">
+        <a href="https://www.bbc.co.uk">
+          <h1 className="mt-6 text-sm font-bold text-gray-400 hover:text-red-400">
+            All claims not yet assessed..
+          </h1>
+        </a>
         <table className="table-auto mt-10 mb-10">
           <thead>
             <tr>
