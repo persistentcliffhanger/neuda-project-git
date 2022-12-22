@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { getAllClaims } from "./data/ClaimData";
 // import { Claimdata } from "./data/data.js";
 import { useSearchParams } from "react-router-dom";
+import Infotablerows from "./Infotablerows";
 
 
 const Claimdetails = () => {
@@ -317,8 +318,10 @@ const Claimdetails = () => {
               <img src={policy[0].image_1} alt="pic" />
             </div> */}
           </div>
+          <Infotablerows />
         </div>
       </div>
+      
     </div>
   );
 };

@@ -9,7 +9,7 @@ import { getAllClaims } from "./data/ClaimData";
 const Allclaims = (props) => {
   const [claim, setClaims] = useState([]);
   const claimdata = getAllClaims();
-  
+
   useEffect(() => {
     loadClaim();
   }, []);
@@ -70,6 +70,7 @@ const Allclaims = (props) => {
             })}
           </tbody>
         </table>
+        
       </div>
     </>
   );
