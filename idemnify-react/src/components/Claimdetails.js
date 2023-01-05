@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { getAllClaims } from "./data/ClaimData";
-// import { Claimdata } from "./data/data.js";
 import { useSearchParams } from "react-router-dom";
 import Infotablerows from "./Infotablerows";
 
@@ -315,9 +314,7 @@ const Claimdetails = () => {
                 Update
               </button>
             </form>
-            {/* <div className="w-1/2 h-auto hidden md:block bg-cover bg-center opacity-100 mt-10">
-              <img src={policy[0].image_1} alt="pic" />
-            </div> */}
+            
           </div>
           <Infotablerows />
         </div>

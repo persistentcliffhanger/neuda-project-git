@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import React, from "react";
 function Infotable() {
   return <div>Form page</div>;
 
@@ -101,7 +100,6 @@ function Infotable() {
     </>
   );
 }
-// export default Infotablerows;
 
 }
 export default Infotable;

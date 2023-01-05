@@ -1,7 +1,5 @@
-// import "./data/data.js";
 import "../Claims.css";
 import { useState, useEffect } from "react";
-// import { Claimdata } from "./data/data.js";
 import Claimsrow from "./claimsrow.js";
 import { getAllClaims } from "./data/ClaimData";
 

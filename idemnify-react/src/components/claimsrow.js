@@ -1,5 +1,3 @@
-// import Claimdetails from "./Claimdetails";
-
 import { useNavigate } from "react-router-dom";
 
 const Claimsrow = (props) => {

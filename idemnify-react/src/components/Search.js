@@ -1,10 +1,9 @@
-import { useState } from "react";
 import { useNavigate, useSearchParams } from "react-router-dom";
 
 const Search = () => {
 
     const navigate = useNavigate();
-    
+     
 
   const handleSubmit = (event) => {
     event.preventDefault();

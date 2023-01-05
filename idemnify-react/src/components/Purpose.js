@@ -20,7 +20,6 @@ const Purpose = () => {
             Your involvement is critical as we streamline our claim process serving our 2.1 Billion customers globally.
           </p>
 
-          {/* <img src={RobsSignature} alt="pic" /> */}
           <h3>
             <strong>Rob Coulter</strong> CEO
           </h3>
