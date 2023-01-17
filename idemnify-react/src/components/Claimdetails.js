@@ -1,11 +1,15 @@
+// Explanation comments required
+
 import { useState, useEffect } from "react";
 import { getAllClaims } from "./data/ClaimData";
 import { useSearchParams } from "react-router-dom";
 import Infotablerows from "./Infotablerows";
 
-
+// Explanation comments required
 const Claimdetails = () => {
   const [policy, setPolicy] = useState([]);
+
+// policyData - runs getAllClaims function from ClaimData.js
   const policyData = getAllClaims();
 
   let [searchParams, setSearchParams] = useSearchParams();
@@ -17,7 +21,7 @@ const Claimdetails = () => {
   );
 
   const searchTerm = searchParams.get("policy_number");
-  console.log(searchTerm);
+  //console.log(searchTerm);
 
   const loadPolicy = (searchTerm) => {
     const policy = policyData.filter((policy) => {
@@ -78,7 +82,7 @@ const Claimdetails = () => {
                 aria-label="Enter the policy number"
                 type="text"
                 id="policynum"
-                //when the claim is updated the value is set to the policy number
+                //Claim is updated the value is set to the policy number
                 value={
                   policy[0] && policy[0].policy_number
                     ? policy[0].policy_number
@@ -295,7 +299,7 @@ const Claimdetails = () => {
                               mr-3 py-5 px-4 h-2 border 
                               border-gray-200 rounded mb-2"
               />
-              
+
               <label htmlFor="notes" className="text-xs">
                 Notes
               </label>
@@ -314,7 +318,6 @@ const Claimdetails = () => {
                 Update
               </button>
             </form>
-            
           </div>
           <Infotablerows />
         </div>

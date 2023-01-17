@@ -20,7 +20,7 @@ const Search = () => {
           id="search"
           type="text"
           className="block w-full p-4 pl-10 text-sm text-white border border-gray-300 rounded-lg bg-black focus:ring-white focus:border-white"
-          placeholder="policy number..."
+          placeholder="I'm looking for..."
         />
         <button
           type="submit"

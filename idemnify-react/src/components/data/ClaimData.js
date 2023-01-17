@@ -955,6 +955,16 @@ export const getAllClaims  = () => {
     },
   ];
 };
+
+
+
+
+
+
+
+
+
+
 // const headers = new Headers({ Accept: "application/json" });
 
 // export const getAllClaimsFetchVersion = () => {

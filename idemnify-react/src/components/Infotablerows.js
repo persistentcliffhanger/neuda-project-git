@@ -66,7 +66,7 @@ function Infotablerows({ rows, tableRowRemove, onValUpdate }) {
 function Table() {
   const [rows, initRow] = useState([]);
   const addRowTable = () => {
-    let time = new Date().getUTCFullYear;
+    const time = new Date().getUTCFullYear;
     const data = {
       completed: "",
       date: {time},
