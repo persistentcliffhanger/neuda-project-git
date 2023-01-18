@@ -1,3 +1,5 @@
+//DEPRECATED    -   NOT IN USE
+
 // import { useReducer, useState } from "react";
 // import { addNewClaim } from "../data/ClaimData.js";
 // import reflect from "./images/reflect.jpg";

@@ -81,7 +81,7 @@ function Header() {
                 </li>
                 <li>
                   <NavLink
-                    to="/newclaim"
+                    to="/addclaim"
                     className="block p-3 hover:text-white text-gray-500"
                   >
                     New QuikClaim

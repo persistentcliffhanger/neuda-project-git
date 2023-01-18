@@ -17,7 +17,7 @@ const AddClaim = () => {
     pet_breed: "",
     claim_description: "",
     claim_reason: "",
-    claim_status: "",
+    claim_status: "New Claim",
     image_1: "",
   };
 
@@ -34,7 +34,7 @@ const AddClaim = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setMessage("saving");
+    setMessage("..updating");
     console.log(newClaim);
     const response = addNewClaim(newClaim);
     response
@@ -68,15 +68,9 @@ const AddClaim = () => {
     claim_reason,
     claim_status,
     image_1,
-    } = newClaim;
-    
+  } = newClaim;
 
-
-
-
-
-
-// Selective Content Rendering
+  // Selective Content Rendering
 
   const [insurancetype, setinsurancetype] = useState("");
   const insurancepolicytype = () => {
@@ -85,206 +79,8 @@ const AddClaim = () => {
         <>
           <div id="propertyclaim">
             <h3 className="text-gray-400 font-bold text-xl mt-4 mb-3">
-              Property
+              Property Details
             </h3>
-
-            <textarea
-              aria-label="Address of Property"
-              rows="2"
-              placeholder="Address of Property..."
-              id="claimreason"
-              className="border border-gray-200 py-2 px-3 mt-2 formcolor rounded w-full"
-            ></textarea>
-          </div>{" "}
-        </>
-      );
-    } else if (insurancetype === "motor") {
-      return (
-        <>
-          <div id="motorclaim">
-            <h3 className="text-gray-400 font-bold text-xl mt-4 mb-3">Motor</h3>
-
-            <input
-              aria-label="Enter the Make of Vehicle"
-              type="text"
-              placeholder="Make of Vehicle"
-              className="text-sm text-gray-base w-full mt-2 mr-3 
-                              py-5 px-4 h-2 border border-gray-200 
-                              rounded"
-            />
-            <input
-              aria-label="Enter the Model of Vehicle"
-              type="text"
-              placeholder="Model of Vehicle"
-              className="text-sm text-gray-base w-full mt-2 mr-3 
-                              py-5 px-4 h-2 border border-gray-200 
-                              rounded"
-            />
-            <input
-              aria-label="Enter the Year of Manufacture"
-              type="text"
-              placeholder="Year of Manufacture"
-              className="text-sm text-gray-base w-full mt-2 mr-3 
-                              py-5 px-4 h-2 border border-gray-200 
-                              rounded"
-            />
-          </div>{" "}
-        </>
-      );
-    } else if (insurancetype === "pet") {
-      return (
-        <>
-          <div id="petclaim">
-            <h3 className="text-gray-400 font-bold text-xl mt-4 mb-3">Pet</h3>
-
-            <input
-              aria-label="Enter the Type of Pet"
-              type="text"
-              placeholder="Type of Pet"
-              className="text-sm text-gray-base w-full mt-2 mr-3 
-                              py-5 px-4 h-2 border border-gray-200 
-                              rounded"
-            />
-            <input
-              aria-label="Enter the Breed of Animal"
-              type="text"
-              placeholder="Breeds of Animal"
-              className="text-sm text-gray-base w-full mt-2 mr-3 
-                              py-5 px-4 h-2 border border-gray-200 
-                              rounded"
-            />
-          </div>{" "}
-        </>
-      );
-    }
-  };
-
-
-
-
-
-
-
-  return (
-    <div className="container flex lg mx-auto overflow-x-hidden bg-white">
-      <div className="w-1/2 h-auto hidden md:block bg-cover bg-center opacity-50 mt-10">
-        <img src={reflect} alt="pic" />
-      </div>
-
-      <div className="w-1/2 h-auto md:block bg-cover bg-center md:w-full opacity-100 px-6 py-2 mt-0">
-        <div
-          className=" flex flex-col 
-                     items-center justify-center"
-        >
-          <p className="text-black font-bold text-xl mb-3">New Quikclaim</p>
-          <form className="addClaimsForm" onSubmit={handleSubmit}>
-            <label
-              htmlFor="policy_number"
-              class="form-label inline-block m-auto text-slate-800 smallfont px-2 mt-4  rounded-full bg-gray-100"
-            >
-              Policy Number
-            </label>
-            <input
-              aria-label="Enter the policy number"
-              type="text"
-              id="policy_number"
-              placeholder="Policy Number"
-              className="text-sm text-gray-base w-full 
-                               mr-3 py-5 px-4 h-2 border 
-                               border-gray-200 rounded mb-2"
-              value={policy_number}
-              onChange={handleChange}
-            />
-            <br />
-            <label
-              htmlFor="customer_name"
-              class="form-label inline-block m-auto text-slate-800 smallfont px-2 mt-4 rounded-full bg-gray-100"
-            >
-              Customer Name
-            </label>
-            <input
-              aria-label="Enter the policy holders name"
-              type="text"
-              id="customer_name"
-              placeholder="Policy holders name"
-              className="text-sm text-gray-base w-full mr-3 py-5 px-4 h-2 border border-gray-200 rounded mb-2"
-              value={customer_name}
-              onChange={handleChange}
-            />
-            <br />
-
-            <label
-              for="claimdate"
-              class="form-label inline-block m-auto text-slate-800 smallfont px-2 mt-4 rounded-full bg-gray-100"
-            >
-              Date of Claim
-            </label>
-            <input
-              aria-label="Date of Claim"
-              type="date"
-              id="claimdate"
-              placeholder="claimdate"
-              class="border border-gray-200 py-2 px-12 text-gray-400 rounded mt-2 w-full"
-            />
-
-            {/* //TODO: add the rest of the fields and update to select */}
-            <label
-              htmlFor="claim_type"
-              class="form-label inline-block m-auto text-slate-800 smallfont px-2 mt-4 rounded-full bg-gray-100"
-            >
-              Claim Type
-            </label>
-            <select
-              class="rounded mt-2 form-select appearance-none block w-full px-3 py-1.5 mb-2 text-base font-normal text-gray-400 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-200 transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-1"
-              onChange={(event) => setinsurancetype(event.target.value)}
-              id="name"
-              value={insurancetype}
-            >
-              <option selected>Claim Type..</option>
-              <option value="property">Property</option>
-              <option value="motor">Motor</option>
-              <option value="pet">Pet</option>
-            </select>
-
-            <input
-              type="text"
-              id="claim_type"
-              value={claim_type}
-              onChange={handleChange}
-            />
-            <br />
-
-            <label
-              htmlFor="claim_date"
-              class="form-label inline-block m-auto text-slate-800 smallfont px-2 mt-4 rounded-full bg-gray-100"
-            >
-              Claim Date
-            </label>
-            <input
-              type="date"
-              id="claim_date"
-              value={claim_date}
-              onChange={handleChange}
-            />
-            <br />
-            <label
-              htmlFor="est_claim_amt"
-              class="form-label inline-block m-auto text-slate-800 smallfont px-2 mt-4 rounded-full bg-gray-100"
-            >
-              est_claim_amt
-            </label>
-            <input
-              aria-label="Enter the estimated claim amount"
-              type="text"
-              id="est_claim_amt"
-              placeholder="Estimated claim amount ($)"
-              className="text-sm text-gray-base w-full mt-2 mr-3 
-                               py-5 px-4 h-2 border border-gray-200 
-                               rounded"
-              value={est_claim_amt}
-              onChange={handleChange}
-            />
-            <br />
 
             <label
               htmlFor="address"
@@ -304,6 +100,16 @@ const AddClaim = () => {
               onChange={handleChange}
             />
             <br />
+          </div>{" "}
+        </>
+      );
+    } else if (insurancetype === "motor") {
+      return (
+        <>
+          <div id="motorclaim">
+            <h3 className="text-gray-400 font-bold text-xl mt-4 mb-3">
+              Motor Details
+            </h3>
 
             <label
               htmlFor="vehicle_make"
@@ -322,7 +128,6 @@ const AddClaim = () => {
               onChange={handleChange}
             />
             <br />
-
             <label
               htmlFor="vehicle_model"
               class="form-label inline-block m-auto text-slate-800 smallfont px-2 mt-4 rounded-full bg-gray-100"
@@ -357,6 +162,17 @@ const AddClaim = () => {
               onChange={handleChange}
             />
             <br />
+          </div>{" "}
+        </>
+      );
+    } else if (insurancetype === "pet") {
+      return (
+        <>
+          <div id="petclaim">
+            <h3 className="text-gray-400 font-bold text-xl mt-4 mb-3">
+              Pet Details
+            </h3>
+
             <label
               htmlFor="pet_type"
               class="form-label inline-block m-auto text-slate-800 smallfont px-2 mt-4 rounded-full bg-gray-100"
@@ -391,11 +207,106 @@ const AddClaim = () => {
               onChange={handleChange}
             />
             <br />
+          </div>{" "}
+        </>
+      );
+    }
+  };
+
+  return (
+    <div className="container flex lg mx-auto overflow-x-hidden bg-white">
+      <div className="w-1/2 h-auto hidden md:block bg-cover bg-center opacity-50 mt-10">
+        <img src={reflect} alt="pic" />
+      </div>
+
+      <div className="w-1/2 h-auto bg-cover bg-center w-full opacity-100 px-6 py-2 mt-0">
+        <div
+          className=" flex flex-col 
+                     items-center justify-center"
+        >
+          <p className="text-black font-bold text-xl mb-3">New Quikclaim</p>
+          <form className="addClaimsForm" onSubmit={handleSubmit}>
+            <h3 className="text-black  font-bold text-xl mt-4 mb-3">
+              Claimant Details
+            </h3>
+            <label
+              htmlFor="policy_number"
+              class="form-label inline-block m-auto  smallfont px-2 mt-4  rounded-full bg-black text-white"
+            >
+              Policy Number
+            </label>
+            <input
+              aria-label="Enter the policy number"
+              type="text"
+              id="policy_number"
+              placeholder="Policy Number"
+              className="text-sm text-gray-base w-full 
+                               mr-3 py-5 px-4 h-2 border 
+                               border-gray-200 rounded mb-2"
+              value={policy_number}
+              onChange={handleChange}
+            />
+            <br />
+            <label
+              htmlFor="customer_name"
+              class="form-label inline-block m-auto  smallfont px-2 mt-4 rounded-full bg-black text-white"
+            >
+              Customer Name
+            </label>
+            <input
+              aria-label="Enter the policy holders name"
+              type="text"
+              id="customer_name"
+              placeholder="Policy holders name"
+              className="text-sm text-gray-base w-full mr-3 py-5 px-4 h-2 border border-gray-200 rounded mb-2"
+              value={customer_name}
+              onChange={handleChange}
+            />
+            <br />
+
+            <br />
+            <hr />
+            <h3 className="text-black  font-bold text-xl mt-4 mb-3">
+              Claim Details
+            </h3>
+            <label
+              htmlFor="claim_date"
+              class="form-label inline-block m-auto  smallfont px-2 mt-4 rounded-full bg-black text-white"
+            >
+              Claim Date
+            </label>
+            <input
+              type="date"
+              id="claim_date"
+              value={claim_date}
+              onChange={handleChange}
+            />
+            <br />
+            <label
+              htmlFor="est_claim_amt"
+              class="form-label inline-block m-auto  smallfont px-2 mt-8 rounded-full bg-black text-white"
+            >
+              $
+            </label>
+            <input
+              aria-label="Enter the estimated claim amount"
+              type="text"
+              id="est_claim_amt"
+              placeholder="Estimated claim amount.."
+              className="text-sm text-gray-base w-full mt-2 mr-3 
+                               py-5 px-4 h-2 border border-gray-200 
+                               rounded"
+              value={est_claim_amt}
+              onChange={handleChange}
+            />
+            <br />
+
+            <br />
             <label
               htmlFor="claim_description"
-              class="form-label inline-block m-auto text-slate-800 smallfont px-2 mt-4 rounded-full bg-gray-100"
+              class="form-label inline-block m-auto smallfont px-2 mt-4 rounded-full bg-black text-white"
             >
-              claim_description
+              Description
             </label>
             <input
               type="textarea"
@@ -410,9 +321,9 @@ const AddClaim = () => {
             <br />
             <label
               htmlFor="claim_reason"
-              class="form-label inline-block m-auto text-slate-800 smallfont px-2 mt-4 rounded-full bg-gray-100"
+              class="form-label inline-block m-auto  smallfont px-2 mt-4 rounded-full bg-black text-white"
             >
-              claim_reason
+              Reason
             </label>
             <input
               type="textarea"
@@ -427,9 +338,9 @@ const AddClaim = () => {
             <br />
             <label
               htmlFor="claim_status"
-              class="form-label inline-block m-auto text-slate-800 smallfont px-2 mt-4 rounded-full bg-gray-100"
+              class="form-label inline-block m-auto  smallfont px-2 mt-4 rounded-full bg-black text-white"
             >
-              claim_status
+              Status
             </label>
             <input
               type="text"
@@ -442,11 +353,39 @@ const AddClaim = () => {
               onChange={handleChange}
             />
             <br />
+            <br />
+            <hr />
+            <br />
+            <label
+              htmlFor="claim_type"
+              class="form-label inline-block m-auto  smallfont px-2 mt-4 rounded-full bg-black text-white"
+            >
+              Type
+            </label>
+            <select
+              class="rounded mt-2 form-select appearance-none block w-full px-3 py-1.5 mb-2 text-base font-normal text-gray-400 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-200 transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-1"
+              onChange={(event) => setinsurancetype(event.target.value)}
+              id="name"
+              value={insurancetype}
+            >
+              <option selected>Claim Type..</option>
+              <option value="property">Property</option>
+              <option value="motor">Motor</option>
+              <option value="pet">Pet</option>
+            </select>
+            {insurancepolicytype()}
+            <br />
+            <br />
+            <hr />
+            <br />
+            <h3 className="text-black font-bold text-xl mt-4 mb-3">
+              Further Information
+            </h3>
             <label
               htmlFor="image_1"
-              class="form-label inline-block m-auto text-slate-800 smallfont px-2 mt-4 rounded-full bg-gray-100"
+              class="form-label inline-block m-auto  smallfont px-2 mt-4 rounded-full bg-black text-white"
             >
-              image_1
+              Images
             </label>
             <input
               type="text"
@@ -458,7 +397,6 @@ const AddClaim = () => {
               value={image_1}
               onChange={handleChange}
             />
-            <br />
             <button
               type="submit"
               className="bg-black text-white hover:bg-gray-600 w-full mt-4"
