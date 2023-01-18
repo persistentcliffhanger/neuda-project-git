@@ -211,6 +211,28 @@ const AddClaim = () => {
         </>
       );
     }
+
+// function FormInput() {
+//   const [valid, setValid] = useState(true);
+
+//   const handleValidityChange = (event) => {
+//     if (event.target.value === "" || !event.target.value.match(/^[A-Za-z]+$/)) {
+//       setValid(false);
+//     } else {
+//       setValid(true);
+//     }
+//   };
+
+//   return (
+//     <input className={valid ? "" : "invalid"} onChange={handleValidityChange} />
+//   );
+// }
+
+
+
+
+
+
   };
 
   return (
