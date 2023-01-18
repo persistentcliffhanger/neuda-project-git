@@ -84,86 +84,86 @@
 //   //   }
 //   // };
 
-//   // const [insurancetype, setinsurancetype] = useState("");
-//   // const insurancepolicytype = () => {
-//   //   if (insurancetype === "property") {
-//   //     return (
-//   //       <>
-//   //         <div id="propertyclaim">
-//   //           <h3 className="text-gray-400 font-bold text-xl mt-4 mb-3">
-//   //             Property
-//   //           </h3>
+  const [insurancetype, setinsurancetype] = useState("");
+  const insurancepolicytype = () => {
+    if (insurancetype === "property") {
+      return (
+        <>
+          <div id="propertyclaim">
+            <h3 className="text-gray-400 font-bold text-xl mt-4 mb-3">
+              Property
+            </h3>
 
-//   //           <textarea
-//   //             aria-label="Address of Property"
-//   //             rows="2"
-//   //             placeholder="Address of Property..."
-//   //             id="claimreason"
-//   //             className="border border-gray-200 py-2 px-3 mt-2 formcolor rounded w-full"
-//   //           ></textarea>
-//   //         </div>{" "}
-//   //       </>
-//   //     );
-//   //   } else if (insurancetype === "motor") {
-//   //     return (
-//   //       <>
-//   //         <div id="motorclaim">
-//   //           <h3 className="text-gray-400 font-bold text-xl mt-4 mb-3">Motor</h3>
+            <textarea
+              aria-label="Address of Property"
+              rows="2"
+              placeholder="Address of Property..."
+              id="claimreason"
+              className="border border-gray-200 py-2 px-3 mt-2 formcolor rounded w-full"
+            ></textarea>
+          </div>{" "}
+        </>
+      );
+    } else if (insurancetype === "motor") {
+      return (
+        <>
+          <div id="motorclaim">
+            <h3 className="text-gray-400 font-bold text-xl mt-4 mb-3">Motor</h3>
 
-//   //           <input
-//   //             aria-label="Enter the Make of Vehicle"
-//   //             type="text"
-//   //             placeholder="Make of Vehicle"
-//   //             className="text-sm text-gray-base w-full mt-2 mr-3 
-//   //                             py-5 px-4 h-2 border border-gray-200 
-//   //                             rounded"
-//   //           />
-//   //           <input
-//   //             aria-label="Enter the Model of Vehicle"
-//   //             type="text"
-//   //             placeholder="Model of Vehicle"
-//   //             className="text-sm text-gray-base w-full mt-2 mr-3 
-//   //                             py-5 px-4 h-2 border border-gray-200 
-//   //                             rounded"
-//   //           />
-//   //           <input
-//   //             aria-label="Enter the Year of Manufacture"
-//   //             type="text"
-//   //             placeholder="Year of Manufacture"
-//   //             className="text-sm text-gray-base w-full mt-2 mr-3 
-//   //                             py-5 px-4 h-2 border border-gray-200 
-//   //                             rounded"
-//   //           />
-//   //         </div>{" "}
-//   //       </>
-//   //     );
-//   //   } else if (insurancetype === "pet") {
-//   //     return (
-//   //       <>
-//   //         <div id="petclaim">
-//   //           <h3 className="text-gray-400 font-bold text-xl mt-4 mb-3">Pet</h3>
+            <input
+              aria-label="Enter the Make of Vehicle"
+              type="text"
+              placeholder="Make of Vehicle"
+              className="text-sm text-gray-base w-full mt-2 mr-3 
+                              py-5 px-4 h-2 border border-gray-200 
+                              rounded"
+            />
+            <input
+              aria-label="Enter the Model of Vehicle"
+              type="text"
+              placeholder="Model of Vehicle"
+              className="text-sm text-gray-base w-full mt-2 mr-3 
+                              py-5 px-4 h-2 border border-gray-200 
+                              rounded"
+            />
+            <input
+              aria-label="Enter the Year of Manufacture"
+              type="text"
+              placeholder="Year of Manufacture"
+              className="text-sm text-gray-base w-full mt-2 mr-3 
+                              py-5 px-4 h-2 border border-gray-200 
+                              rounded"
+            />
+          </div>{" "}
+        </>
+      );
+    } else if (insurancetype === "pet") {
+      return (
+        <>
+          <div id="petclaim">
+            <h3 className="text-gray-400 font-bold text-xl mt-4 mb-3">Pet</h3>
 
-//   //           <input
-//   //             aria-label="Enter the Type of Pet"
-//   //             type="text"
-//   //             placeholder="Type of Pet"
-//   //             className="text-sm text-gray-base w-full mt-2 mr-3 
-//   //                             py-5 px-4 h-2 border border-gray-200 
-//   //                             rounded"
-//   //           />
-//   //           <input
-//   //             aria-label="Enter the Breed of Animal"
-//   //             type="text"
-//   //             placeholder="Breeds of Animal"
-//   //             className="text-sm text-gray-base w-full mt-2 mr-3 
-//   //                             py-5 px-4 h-2 border border-gray-200 
-//   //                             rounded"
-//   //           />
-//   //         </div>{" "}
-//   //       </>
-//   //     );
-//   //   }
-//   // };
+            <input
+              aria-label="Enter the Type of Pet"
+              type="text"
+              placeholder="Type of Pet"
+              className="text-sm text-gray-base w-full mt-2 mr-3 
+                              py-5 px-4 h-2 border border-gray-200 
+                              rounded"
+            />
+            <input
+              aria-label="Enter the Breed of Animal"
+              type="text"
+              placeholder="Breeds of Animal"
+              className="text-sm text-gray-base w-full mt-2 mr-3 
+                              py-5 px-4 h-2 border border-gray-200 
+                              rounded"
+            />
+          </div>{" "}
+        </>
+      );
+    }
+  };
 //   // const initialNewClaimState = {
 //   //   policy_number: "",
 //   //   claim_type: "",

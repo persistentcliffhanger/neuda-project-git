@@ -68,7 +68,102 @@ const AddClaim = () => {
     claim_reason,
     claim_status,
     image_1,
-  } = newClaim;
+    } = newClaim;
+    
+
+
+
+
+
+
+// Selective Content Rendering
+
+  const [insurancetype, setinsurancetype] = useState("");
+  const insurancepolicytype = () => {
+    if (insurancetype === "property") {
+      return (
+        <>
+          <div id="propertyclaim">
+            <h3 className="text-gray-400 font-bold text-xl mt-4 mb-3">
+              Property
+            </h3>
+
+            <textarea
+              aria-label="Address of Property"
+              rows="2"
+              placeholder="Address of Property..."
+              id="claimreason"
+              className="border border-gray-200 py-2 px-3 mt-2 formcolor rounded w-full"
+            ></textarea>
+          </div>{" "}
+        </>
+      );
+    } else if (insurancetype === "motor") {
+      return (
+        <>
+          <div id="motorclaim">
+            <h3 className="text-gray-400 font-bold text-xl mt-4 mb-3">Motor</h3>
+
+            <input
+              aria-label="Enter the Make of Vehicle"
+              type="text"
+              placeholder="Make of Vehicle"
+              className="text-sm text-gray-base w-full mt-2 mr-3 
+                              py-5 px-4 h-2 border border-gray-200 
+                              rounded"
+            />
+            <input
+              aria-label="Enter the Model of Vehicle"
+              type="text"
+              placeholder="Model of Vehicle"
+              className="text-sm text-gray-base w-full mt-2 mr-3 
+                              py-5 px-4 h-2 border border-gray-200 
+                              rounded"
+            />
+            <input
+              aria-label="Enter the Year of Manufacture"
+              type="text"
+              placeholder="Year of Manufacture"
+              className="text-sm text-gray-base w-full mt-2 mr-3 
+                              py-5 px-4 h-2 border border-gray-200 
+                              rounded"
+            />
+          </div>{" "}
+        </>
+      );
+    } else if (insurancetype === "pet") {
+      return (
+        <>
+          <div id="petclaim">
+            <h3 className="text-gray-400 font-bold text-xl mt-4 mb-3">Pet</h3>
+
+            <input
+              aria-label="Enter the Type of Pet"
+              type="text"
+              placeholder="Type of Pet"
+              className="text-sm text-gray-base w-full mt-2 mr-3 
+                              py-5 px-4 h-2 border border-gray-200 
+                              rounded"
+            />
+            <input
+              aria-label="Enter the Breed of Animal"
+              type="text"
+              placeholder="Breeds of Animal"
+              className="text-sm text-gray-base w-full mt-2 mr-3 
+                              py-5 px-4 h-2 border border-gray-200 
+                              rounded"
+            />
+          </div>{" "}
+        </>
+      );
+    }
+  };
+
+
+
+
+
+
 
   return (
     <div className="container flex lg mx-auto overflow-x-hidden bg-white">
@@ -76,7 +171,7 @@ const AddClaim = () => {
         <img src={reflect} alt="pic" />
       </div>
 
-      <div className="w-1/2 h-auto md:block bg-cover bg-center sm:w-full opacity-100 px-6 py-2 mt-0">
+      <div className="w-1/2 h-auto md:block bg-cover bg-center md:w-full opacity-100 px-6 py-2 mt-0">
         <div
           className=" flex flex-col 
                      items-center justify-center"
@@ -85,7 +180,7 @@ const AddClaim = () => {
           <form className="addClaimsForm" onSubmit={handleSubmit}>
             <label
               htmlFor="policy_number"
-              class="form-label inline-block m-auto text-slate-800 smallfont px-2  rounded-full bg-gray-100"
+              class="form-label inline-block m-auto text-slate-800 smallfont px-2 mt-4  rounded-full bg-gray-100"
             >
               Policy Number
             </label>
@@ -103,7 +198,7 @@ const AddClaim = () => {
             <br />
             <label
               htmlFor="customer_name"
-              class="form-label inline-block m-auto text-slate-800 smallfont px-2  rounded-full bg-gray-100"
+              class="form-label inline-block m-auto text-slate-800 smallfont px-2 mt-4 rounded-full bg-gray-100"
             >
               Customer Name
             </label>
@@ -117,13 +212,40 @@ const AddClaim = () => {
               onChange={handleChange}
             />
             <br />
+
+            <label
+              for="claimdate"
+              class="form-label inline-block m-auto text-slate-800 smallfont px-2 mt-4 rounded-full bg-gray-100"
+            >
+              Date of Claim
+            </label>
+            <input
+              aria-label="Date of Claim"
+              type="date"
+              id="claimdate"
+              placeholder="claimdate"
+              class="border border-gray-200 py-2 px-12 text-gray-400 rounded mt-2 w-full"
+            />
+
             {/* //TODO: add the rest of the fields and update to select */}
             <label
               htmlFor="claim_type"
-              class="form-label inline-block m-auto text-slate-800 smallfont px-2  rounded-full bg-gray-100"
+              class="form-label inline-block m-auto text-slate-800 smallfont px-2 mt-4 rounded-full bg-gray-100"
             >
               Claim Type
             </label>
+            <select
+              class="rounded mt-2 form-select appearance-none block w-full px-3 py-1.5 mb-2 text-base font-normal text-gray-400 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-200 transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-1"
+              onChange={(event) => setinsurancetype(event.target.value)}
+              id="name"
+              value={insurancetype}
+            >
+              <option selected>Claim Type..</option>
+              <option value="property">Property</option>
+              <option value="motor">Motor</option>
+              <option value="pet">Pet</option>
+            </select>
+
             <input
               type="text"
               id="claim_type"
@@ -134,7 +256,7 @@ const AddClaim = () => {
 
             <label
               htmlFor="claim_date"
-              class="form-label inline-block m-auto text-slate-800 smallfont px-2  rounded-full bg-gray-100"
+              class="form-label inline-block m-auto text-slate-800 smallfont px-2 mt-4 rounded-full bg-gray-100"
             >
               Claim Date
             </label>
@@ -147,7 +269,7 @@ const AddClaim = () => {
             <br />
             <label
               htmlFor="est_claim_amt"
-              class="form-label inline-block m-auto text-slate-800 smallfont px-2  rounded-full bg-gray-100"
+              class="form-label inline-block m-auto text-slate-800 smallfont px-2 mt-4 rounded-full bg-gray-100"
             >
               est_claim_amt
             </label>
@@ -166,7 +288,7 @@ const AddClaim = () => {
 
             <label
               htmlFor="address"
-              class="form-label inline-block m-auto text-slate-800 smallfont px-2  rounded-full bg-gray-100"
+              class="form-label inline-block m-auto text-slate-800 smallfont px-2 mt-4 rounded-full bg-gray-100"
             >
               Address
             </label>
@@ -185,7 +307,7 @@ const AddClaim = () => {
 
             <label
               htmlFor="vehicle_make"
-              class="form-label inline-block m-auto text-slate-800 smallfont px-2  rounded-full bg-gray-100"
+              class="form-label inline-block m-auto text-slate-800 smallfont px-2 mt-4 rounded-full bg-gray-100"
             >
               Vehicle Make
             </label>
@@ -203,7 +325,7 @@ const AddClaim = () => {
 
             <label
               htmlFor="vehicle_model"
-              class="form-label inline-block m-auto text-slate-800 smallfont px-2  rounded-full bg-gray-100"
+              class="form-label inline-block m-auto text-slate-800 smallfont px-2 mt-4 rounded-full bg-gray-100"
             >
               Vehicle Model
             </label>
@@ -220,7 +342,7 @@ const AddClaim = () => {
             <br />
             <label
               htmlFor="vehicle_year"
-              class="form-label inline-block m-auto text-slate-800 smallfont px-2  rounded-full bg-gray-100"
+              class="form-label inline-block m-auto text-slate-800 smallfont px-2 mt-4 rounded-full bg-gray-100"
             >
               vehicle_year
             </label>
@@ -237,7 +359,7 @@ const AddClaim = () => {
             <br />
             <label
               htmlFor="pet_type"
-              class="form-label inline-block m-auto text-slate-800 smallfont px-2  rounded-full bg-gray-100"
+              class="form-label inline-block m-auto text-slate-800 smallfont px-2 mt-4 rounded-full bg-gray-100"
             >
               pet_type
             </label>
@@ -254,7 +376,7 @@ const AddClaim = () => {
             <br />
             <label
               htmlFor="pet_breed"
-              class="form-label inline-block m-auto text-slate-800 smallfont px-2  rounded-full bg-gray-100"
+              class="form-label inline-block m-auto text-slate-800 smallfont px-2 mt-4 rounded-full bg-gray-100"
             >
               pet_breed
             </label>
@@ -271,7 +393,7 @@ const AddClaim = () => {
             <br />
             <label
               htmlFor="claim_description"
-              class="form-label inline-block m-auto text-slate-800 smallfont px-2  rounded-full bg-gray-100"
+              class="form-label inline-block m-auto text-slate-800 smallfont px-2 mt-4 rounded-full bg-gray-100"
             >
               claim_description
             </label>
@@ -288,7 +410,7 @@ const AddClaim = () => {
             <br />
             <label
               htmlFor="claim_reason"
-              class="form-label inline-block m-auto text-slate-800 smallfont px-2  rounded-full bg-gray-100"
+              class="form-label inline-block m-auto text-slate-800 smallfont px-2 mt-4 rounded-full bg-gray-100"
             >
               claim_reason
             </label>
@@ -305,7 +427,7 @@ const AddClaim = () => {
             <br />
             <label
               htmlFor="claim_status"
-              class="form-label inline-block m-auto text-slate-800 smallfont px-2  rounded-full bg-gray-100"
+              class="form-label inline-block m-auto text-slate-800 smallfont px-2 mt-4 rounded-full bg-gray-100"
             >
               claim_status
             </label>
@@ -322,7 +444,7 @@ const AddClaim = () => {
             <br />
             <label
               htmlFor="image_1"
-              class="form-label inline-block m-auto text-slate-800 smallfont px-2  rounded-full bg-gray-100"
+              class="form-label inline-block m-auto text-slate-800 smallfont px-2 mt-4 rounded-full bg-gray-100"
             >
               image_1
             </label>
