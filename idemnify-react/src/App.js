@@ -9,8 +9,9 @@ import Allclaims from "./components/Allclaims";
 import Claimdetails from "./components/Claimdetails";
 import Landing from "./components/Landing";
 import ClaimsTable from "./components/Claimstable";
-import Newclaim from "./components/Newclaim";
+// import Newclaim from "./components/Newclaim";
 import Purpose from "./components/Purpose";
+import AddClaim from "./components/Addclaim";
 
 
 
@@ -23,7 +24,7 @@ function App() {
         <Header />
         <Routes>
           <Route path="/claimstable" element={<ClaimsTable />} />
-          <Route path="/newclaim" element={<Newclaim />} />
+          <Route path="/addclaim" element={<AddClaim />} />
           <Route path="/landing" element={<Landing />} />
           <Route path="/claimdetails" element={<Claimdetails />} />
           <Route path="/allclaims" element={<Allclaims />} />

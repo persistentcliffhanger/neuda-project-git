@@ -110,6 +110,12 @@ const Claimdetails = () => {
                               py-5 px-4 h-2 border border-gray-200 
                               rounded mb-2"
               />
+              <button
+                // onClick={() => setclaimFieldValue.policy_number()}
+                className="bg-gray-600 text-white hover:bg-gray-400 w-1/2 mt-4"
+              >
+                Update
+              </button>
               <label htmlFor="claimtype" className="text-xs">
                 Claim Type
               </label>
