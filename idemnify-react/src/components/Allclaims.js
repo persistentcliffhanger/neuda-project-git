@@ -2,14 +2,30 @@ import "../Claims.css";
 import { useState, useEffect } from "react";
 import Claimsrow from "./claimsrow.js";
 import { getAllClaims } from "./data/ClaimData";
+import { getAllClaimsAxiosVersion } from "./data/DataFunctions";
 
 
 const Allclaims = (props) => {
   const [claim, setClaims] = useState([]);
   const claimdata = getAllClaims();
 
+const loadData = () => {
+  getAllClaimsAxiosVersion()
+    .then((response) => {
+      if (response.status === 200) {
+        setClaims(response.data);
+        console.log("response", response.data);
+      } else {
+        console.log("something went wrong", response.status);
+      }
+    })
+    .catch((error) => {
+      console.log("something went wrong", error);
+    });
+};
+
   useEffect(() => {
-    loadClaim();
+    loadData();
   }, []);
 
   const loadClaim = () => {

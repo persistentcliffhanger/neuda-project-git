@@ -1,5 +1,6 @@
 import { useReducer, useState } from "react";
-import { addNewClaim } from "./data/ClaimData.js";
+// import { addNewClaim } from "./data/ClaimData.js";
+import { addNewClaim } from "./data/DataFunctions.js";
 import reflect from "./images/reflect.jpg";
 
 const AddClaim = () => {
@@ -35,6 +36,7 @@ const AddClaim = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     setMessage("..updating");
+    addNewClaim(newClaim);
     console.log(newClaim);
     const response = addNewClaim(newClaim);
     response
@@ -52,23 +54,23 @@ const AddClaim = () => {
     dispatch({ field: event.target.id, value: event.target.value });
   };
 
-  const {
-    policy_number,
-    customer_name,
-    claim_type,
-    claim_date,
-    est_claim_amt,
-    address,
-    vehicle_make,
-    vehicle_model,
-    vehicle_year,
-    pet_type,
-    pet_breed,
-    claim_description,
-    claim_reason,
-    claim_status,
-    image_1,
-  } = newClaim;
+  // const {
+  //   policy_number,
+  //   customer_name,
+  //   claim_type,
+  //   claim_date,
+  //   est_claim_amt,
+  //   address,
+  //   vehicle_make,
+  //   vehicle_model,
+  //   vehicle_year,
+  //   pet_type,
+  //   pet_breed,
+  //   claim_description,
+  //   claim_reason,
+  //   claim_status,
+  //   image_1,
+  // } = newClaim;
 
   // Selective Content Rendering
 
@@ -96,7 +98,7 @@ const AddClaim = () => {
               className="text-sm text-gray-base w-full mt-2 mr-3 
                                py-5 px-4 h-2 border border-gray-200 
                                rounded"
-              value={address}
+              value={newClaim.address}
               onChange={handleChange}
             />
             <br />
@@ -124,7 +126,7 @@ const AddClaim = () => {
               className="text-sm text-gray-base w-full mt-2 mr-3 
                                py-5 px-4 h-2 border border-gray-200 
                                rounded"
-              value={vehicle_make}
+              value={newClaim.vehicle_make}
               onChange={handleChange}
             />
             <br />
@@ -141,7 +143,7 @@ const AddClaim = () => {
               className="text-sm text-gray-base w-full mt-2 mr-3 
                                py-5 px-4 h-2 border border-gray-200 
                                rounded"
-              value={vehicle_model}
+              value={newClaim.vehicle_model}
               onChange={handleChange}
             />
             <br />
@@ -158,7 +160,7 @@ const AddClaim = () => {
               className="text-sm text-gray-base w-full mt-2 mr-3 
                                py-5 px-4 h-2 border border-gray-200 
                                rounded"
-              value={vehicle_year}
+              value={newClaim.vehicle_year}
               onChange={handleChange}
             />
             <br />
@@ -186,7 +188,7 @@ const AddClaim = () => {
               className="text-sm text-gray-base w-full mt-2 mr-3 
                                py-5 px-4 h-2 border border-gray-200 
                                rounded"
-              value={pet_type}
+              value={newClaim.pet_type}
               onChange={handleChange}
             />
             <br />
@@ -203,7 +205,7 @@ const AddClaim = () => {
               className="text-sm text-gray-base w-full mt-2 mr-3 
                                py-5 px-4 h-2 border border-gray-200 
                                rounded"
-              value={pet_breed}
+              value={newClaim.pet_breed}
               onChange={handleChange}
             />
             <br />
@@ -212,27 +214,21 @@ const AddClaim = () => {
       );
     }
 
-// function FormInput() {
-//   const [valid, setValid] = useState(true);
+    // function FormInput() {
+    //   const [valid, setValid] = useState(true);
 
-//   const handleValidityChange = (event) => {
-//     if (event.target.value === "" || !event.target.value.match(/^[A-Za-z]+$/)) {
-//       setValid(false);
-//     } else {
-//       setValid(true);
-//     }
-//   };
+    //   const handleValidityChange = (event) => {
+    //     if (event.target.value === "" || !event.target.value.match(/^[A-Za-z]+$/)) {
+    //       setValid(false);
+    //     } else {
+    //       setValid(true);
+    //     }
+    //   };
 
-//   return (
-//     <input className={valid ? "" : "invalid"} onChange={handleValidityChange} />
-//   );
-// }
-
-
-
-
-
-
+    //   return (
+    //     <input className={valid ? "" : "invalid"} onChange={handleValidityChange} />
+    //   );
+    // }
   };
 
   return (
@@ -241,7 +237,7 @@ const AddClaim = () => {
         <img src={reflect} alt="pic" />
       </div>
 
-      <div className="w-1/2 h-auto bg-cover bg-center w-full opacity-100 px-6 py-2 mt-0">
+      <div className="w-1/2 h-auto bg-cover bg-center opacity-100 px-6 py-2 mt-0">
         <div
           className=" flex flex-col 
                      items-center justify-center"
@@ -265,7 +261,7 @@ const AddClaim = () => {
               className="text-sm text-gray-base w-full 
                                mr-3 py-5 px-4 h-2 border 
                                border-gray-200 rounded mb-2"
-              value={policy_number}
+              value={newClaim.policy_number}
               onChange={handleChange}
             />
             <br />
@@ -281,7 +277,7 @@ const AddClaim = () => {
               id="customer_name"
               placeholder="Policy holders name"
               className="text-sm text-gray-base w-full mr-3 py-5 px-4 h-2 border border-gray-200 rounded mb-2"
-              value={customer_name}
+              value={newClaim.customer_name}
               onChange={handleChange}
             />
             <br />
@@ -300,7 +296,7 @@ const AddClaim = () => {
             <input
               type="date"
               id="claim_date"
-              value={claim_date}
+              value={newClaim.claim_date}
               onChange={handleChange}
             />
             <br />
@@ -318,7 +314,7 @@ const AddClaim = () => {
               className="text-sm text-gray-base w-full mt-2 mr-3 
                                py-5 px-4 h-2 border border-gray-200 
                                rounded"
-              value={est_claim_amt}
+              value={newClaim.est_claim_amt}
               onChange={handleChange}
             />
             <br />
@@ -337,7 +333,7 @@ const AddClaim = () => {
               className="text-sm text-gray-base w-full mt-2 mr-3 
                                py-5 px-4 h-2 border border-gray-200 
                                rounded"
-              value={claim_description}
+              value={newClaim.claim_description}
               onChange={handleChange}
             />
             <br />
@@ -354,7 +350,7 @@ const AddClaim = () => {
               className="text-sm text-gray-base w-full mt-2 mr-3 
                                py-5 px-4 h-2 border border-gray-200 
                                rounded"
-              value={claim_reason}
+              value={newClaim.claim_reason}
               onChange={handleChange}
             />
             <br />
@@ -371,7 +367,7 @@ const AddClaim = () => {
               className="text-sm text-gray-base w-full mt-2 mr-3 
                                py-5 px-4 h-2 border border-gray-200 
                                rounded"
-              value={claim_status}
+              value={newClaim.claim_status}
               onChange={handleChange}
             />
             <br />
@@ -388,7 +384,7 @@ const AddClaim = () => {
               class="rounded mt-2 form-select appearance-none block w-full px-3 py-1.5 mb-2 text-base font-normal text-gray-400 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-200 transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-1"
               onChange={(event) => setinsurancetype(event.target.value)}
               id="name"
-              value={insurancetype}
+              value={newClaim.insurancetype}
             >
               <option selected>Claim Type..</option>
               <option value="property">Property</option>
@@ -416,7 +412,7 @@ const AddClaim = () => {
               className="text-sm text-gray-base w-full mt-2 mr-3 
                                py-5 px-4 h-2 border border-gray-200 
                                rounded"
-              value={image_1}
+              value={newClaim.image_1}
               onChange={handleChange}
             />
             <button

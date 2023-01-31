@@ -9,7 +9,7 @@ import Infotablerows from "./Infotablerows";
 const Claimdetails = () => {
   const [policy, setPolicy] = useState([]);
 
-// policyData - runs getAllClaims function from ClaimData.js
+  // policyData - runs getAllClaims function from ClaimData.js
   const policyData = getAllClaims();
 
   let [searchParams, setSearchParams] = useSearchParams();

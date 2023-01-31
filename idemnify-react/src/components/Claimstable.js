@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Claimsrow from "./claimsrow.js";
 import { useSearchParams } from "react-router-dom";
 import { getAllClaims } from "./data/ClaimData";
+import { getAllClaimsAxiosVersion } from "./data/DataFunctions";
 
 const ClaimsTable = () => {
   const [claims, setClaims] = useState([]);
@@ -14,25 +15,41 @@ const ClaimsTable = () => {
 
   const searchTerm = searchParams.get("search");
 
+  const loadData = (searchTerm) => {
+    getAllClaimsAxiosVersion(searchTerm)
+      .then((response) => {
+        if (response.status === 200) {
+          setClaims(response.data);
+          console.log("response", response.data);
+        } else {
+          console.log("something went wrong", response.status);
+        }
+      })
+      .catch((error) => {
+        console.log("something went wrong", error);
+      });
+  };
+
   useEffect(() => {
-    loadClaim(searchTerm);
+    loadData(searchTerm);
+    
   }, [searchParams]);
 
-  const loadClaim = (searchTerm) => {
-    const searchedClaim = claimdata.filter((eachClaim) => {
-      return (
-        eachClaim.claim_type.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        eachClaim.claim_status
-          .toLowerCase()
-          .includes(searchTerm.toLowerCase()) ||
-        eachClaim.address.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        eachClaim.policy_number === +searchTerm ||
-        eachClaim.claim_date.includes(searchTerm) ||
-        eachClaim.customer_name.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-    });
-    setClaims(searchedClaim);
-  };
+  // const loadClaim = (searchTerm) => {
+  //   const searchedClaim = claimdata.filter((eachClaim) => {
+  //     return (
+  //       eachClaim.claim_type.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  //       eachClaim.claim_status
+  //         .toLowerCase()
+  //         .includes(searchTerm.toLowerCase()) ||
+  //       eachClaim.address.toLowerCase().includes(searchTerm.toLowerCase()) ||
+  //       eachClaim.policy_number === +searchTerm ||
+  //       eachClaim.claim_date.includes(searchTerm) ||
+  //       eachClaim.customer_name.toLowerCase().includes(searchTerm.toLowerCase())
+  //     );
+  //   });
+  //   setClaims(searchedClaim);
+  // };
 
   return (
     <>
@@ -62,22 +79,22 @@ const ClaimsTable = () => {
             </tr>
           </thead>
           <tbody>
-
-            {claims.length >0 && claims.map((claim, index) => {
-              return (
-                <Claimsrow
-                  key={index}
-                  policy_number={claim.policy_number}
-                  customer_name={claim.customer_name}
-                  claim_type={claim.claim_type}
-                  claim_date={claim.claim_date}
-                  est_claim_amt={claim.est_claim_amt}
-                  claim_status={claim.claim_status}
-                  claim_description={claim.claim_description}
-                  claim_image1={claim.claim_image_1}
-                />
-              );
-            })}
+            {claims.length > 0 &&
+              claims.map((claim, index) => {
+                return (
+                  <Claimsrow
+                    key={index}
+                    policy_number={claim.policy_number}
+                    customer_name={claim.customer_name}
+                    claim_type={claim.claim_type}
+                    claim_date={claim.claim_date}
+                    est_claim_amt={claim.est_claim_amt}
+                    claim_status={claim.claim_status}
+                    claim_description={claim.claim_description}
+                    claim_image1={claim.claim_image_1}
+                  />
+                );
+              })}
           </tbody>
         </table>
       </div>

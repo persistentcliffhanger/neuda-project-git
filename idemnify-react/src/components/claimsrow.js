@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 
 const Claimsrow = (props) => {
   
-const initialNewClaimState = {
+const claimFieldValue = {
     policy_number: props.policy_number,
     customer_name: props.customer_name,
     claim_type: props.claim_type,
@@ -24,11 +24,14 @@ const initialNewClaimState = {
 
 
 
-  const [claimFieldValue, setclaimFieldValue] = useState({initialNewClaimState});
+  // const [claimFieldValue, setclaimFieldValue] = useState({initialNewClaimState});
 
   
 
   const navigate = useNavigate();
+
+
+
 
   const onRowClick = (props) => {
     let policy_number = props.policy_number;
@@ -56,60 +59,25 @@ const initialNewClaimState = {
 
         </td>
         <td className="lg:table-cell text-center">{claimFieldValue.policy_number}</td>
-        <button
-                onClick={() => setclaimFieldValue.policy_number()}
-                className="bg-gray-600 text-white hover:bg-gray-400 w-1/2 mt-4"
-              >
-                Update
-              </button>
+        
 
         <td className="lg:table-cell text-center">{claimFieldValue.customer_name}</td>
-        <button
-                onClick={() => setclaimFieldValue.customer_name()}
-                className="bg-gray-600 text-white hover:bg-gray-400 w-1/2 mt-4"
-              >
-                Update
-              </button>
+        
 
         <td className="hidden lg:table-cell text-center">{claimFieldValue.claim_type}</td>
-        <button
-                onClick={() => setclaimFieldValue.claim_type()}
-                className="bg-gray-600 text-white hover:bg-gray-400 w-1/2 mt-4"
-              >
-                Update
-              </button>
+       
 
         <td className="hidden lg:table-cell text-center">{claimFieldValue.claim_date}</td>
-        <button
-                onClick={() => setclaimFieldValue.claim_date()}
-                className="bg-gray-600 text-white hover:bg-gray-400 w-1/2 mt-4"
-              >
-                Update
-              </button>
+       
 
         <td className="lg:table-cell text-center">{claimFieldValue.est_claim_amt}</td>
-        <button
-                onClick={() => setclaimFieldValue.est_claim_amt()}
-                className="bg-gray-600 text-white hover:bg-gray-400 w-1/2 mt-4"
-              >
-                Update
-              </button>
+        
 
         <td className="lg:table-cell text-center">{props.claim_status}</td>
-        <button
-                onClick={() => setclaimFieldValue.claim_status()}
-                className="bg-gray-600 text-white hover:bg-gray-400 w-1/2 mt-4"
-              >
-                Update
-              </button>
+        
 
         <td className="lg:table-cell text-center">{props.image_1}</td>
-        <button
-                onClick={() => setclaimFieldValue.imgURL()}
-                className="bg-gray-600 text-white hover:bg-gray-400 w-1/2 mt-4"
-              >
-                Update
-              </button>
+        
       </tr>
     </>
   );

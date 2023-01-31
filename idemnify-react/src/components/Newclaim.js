@@ -221,30 +221,30 @@
 //                               py-5 px-4 h-2 border border-gray-200 
 //                               rounded mb-2"
 //               />
-               <select
-                 class="rounded mt-2 form-select appearance-none block w-full px-3 py-1.5 mb-2 text-base font-normal text-gray-400 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-200 transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-1"
-                 onChange={(event) => setinsurancetype(event.target.value)}
-                 id="name"
-                 value={insurancetype}
-               >
-                 <option selected>Claim Type..</option>
-                 <option value="property">Property</option>
-                 <option value="motor">Motor</option>
-                 <option value="pet">Pet</option>
-               </select>
-              <label
-                for="claimdate"
-                class="form-label inline-block m-auto text-slate-400 smallfont px-2  rounded "
-              >
-                Date of Claim
-              </label>
-              <input
-                aria-label="Enter the policy holders name"
-                type="date"
-                id="claimdate"
-                placeholder="claimdate"
-                class="border border-gray-200 py-2 px-12 text-gray-400 rounded mt-2 w-full"
-              />
+              //  <select
+              //    class="rounded mt-2 form-select appearance-none block w-full px-3 py-1.5 mb-2 text-base font-normal text-gray-400 bg-white bg-clip-padding bg-no-repeat border border-solid border-gray-200 transition ease-in-out m-0 focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-1"
+              //    onChange={(event) => setinsurancetype(event.target.value)}
+              //    id="name"
+              //    value={insurancetype}
+              //  >
+              //    <option selected>Claim Type..</option>
+              //    <option value="property">Property</option>
+              //    <option value="motor">Motor</option>
+              //    <option value="pet">Pet</option>
+              //  </select>
+              // <label
+              //   for="claimdate"
+              //   class="form-label inline-block m-auto text-slate-400 smallfont px-2  rounded "
+              // >
+              //   Date of Claim
+              // </label>
+              // <input
+              //   aria-label="Enter the policy holders name"
+              //   type="date"
+              //   id="claimdate"
+              //   placeholder="claimdate"
+              //   class="border border-gray-200 py-2 px-12 text-gray-400 rounded mt-2 w-full"
+              // />
 //               <input
 //                 aria-label="Enter the policy holders name"
 //                 type="password"
