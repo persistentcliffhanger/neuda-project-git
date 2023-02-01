@@ -1,13 +1,12 @@
 import "../Claims.css";
 import { useState, useEffect } from "react";
 import Claimsrow from "./claimsrow.js";
-import { getAllClaims } from "./data/ClaimData";
 import { getAllClaimsAxiosVersion } from "./data/DataFunctions";
 
 
 const Allclaims = (props) => {
   const [claim, setClaims] = useState([]);
-  const claimdata = getAllClaims();
+  
 
 const loadData = () => {
   getAllClaimsAxiosVersion()
@@ -28,12 +27,6 @@ const loadData = () => {
     loadData();
   }, []);
 
-  const loadClaim = () => {
-    const claim = claimdata.filter((claim) => {
-      return claim.claim_type;
-    });
-    setClaims(claim);
-  };
 
   return (
     <>

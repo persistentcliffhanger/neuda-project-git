@@ -1,39 +1,32 @@
-// Explanation comments required
-
 import { useState, useEffect } from "react";
-import { getAllClaims } from "./data/ClaimData";
 import { useSearchParams } from "react-router-dom";
 import Infotablerows from "./Infotablerows";
+import { getAllClaimsAxiosVersion, getClaimDataAxiosVersion } from "./data/DataFunctions";
 
-// Explanation comments required
+
 const Claimdetails = () => {
-  const [policy, setPolicy] = useState([]);
+  const [policy, setPolicy] = useState({});
 
-  // policyData - runs getAllClaims function from ClaimData.js
-  const policyData = getAllClaims();
+
 
   let [searchParams, setSearchParams] = useSearchParams();
-  console.log(policy);
-  console.log(policyData);
-  console.log(
-    "ternary: ",
-    policy[0] && policy[0].policy_number ? policy[0].policy_number : "not found"
-  );
+  
 
-  const searchTerm = searchParams.get("policy_number");
+  
   //console.log(searchTerm);
 
   const loadPolicy = (searchTerm) => {
-    const policy = policyData.filter((policy) => {
-      return policy.policy_number === +searchTerm;
-    });
-    setPolicy(policy); // Update the policy state with the filtered policy array
+    getClaimDataAxiosVersion(searchTerm).then (result=>{setPolicy(result.data)}) 
+    
+   
   };
 
   useEffect(() => {
+    const searchTerm = searchParams.get("policy_number");
+    console.log(searchTerm);
     loadPolicy(searchTerm);
-  }, [searchParams]);
-
+  }, []);
+  console.log(policy);
   return (
     <div className="Newquikclaim">
       <div className="container flex lg mx-auto overflow-x-hidden bg-white">

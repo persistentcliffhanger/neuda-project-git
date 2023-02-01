@@ -6,7 +6,6 @@ import axios from "axios";
 //   return { Authorization: "Basic " + btoa(`${username}:${password}`) };
 // };
 
-
 export const getAllClaimsAxiosVersion = () => {
   return axios({
     url: "http://localhost:8080/api/claim",
@@ -23,6 +22,14 @@ export const getAllClaimsBySearch = (searchTerm) => {
     headers: {
       Accept: "application/json",
     },
+  });
+};
+
+export const getClaimDataAxiosVersion = (policyNumber) => {
+  return axios({
+    url: "http://localhost:8080/api/claim?policy_number=" + policyNumber,
+    method: "GET",
+    headers: { Accept: "application/json" },
   });
 };
 
@@ -67,3 +74,29 @@ export const addNewClaim = (claim) => {
 //     data: { username: username },
 //    });
 // };
+
+// export const onRowClick = (props) => {
+
+//   let policy_num = props.policy_number;
+
+//   const [redirState, setState] = useState(false);
+//   const [policyNumOfRequiredData, setPolicyNumOfRequiredData] = useState('');
+//   let redirecting = redirState ? (<Redirect push to={`/claimdetails/policy_number=${policyNumOfRequiredData}`} />) : '';
+
+//   return (
+//     <DataTable
+//       columns={columns}
+//       data={rowData}
+//       onRowClicked={rowData => {
+//         setState(true);
+//         setPolicyNumOfRequiredData(rowData.policyNumOfRequiredData);
+//       }}
+//       pointerOnHover={true}
+//       highlightOnHover={true}
+//       theme="light"
+//       customStyles={customStyles}
+//       striped={true}
+//     />
+//     // {redirecting}
+//   );
+// }

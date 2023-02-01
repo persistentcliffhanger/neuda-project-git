@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Header from "./components/Header";
@@ -51,11 +51,11 @@ function App() {
 //         <Route path="/login" element = {<Login />} />
 
 //         <Route path="/add" element = {
-//             <ProtectedRoute path="add" roles={["MANAGER"]} element = {<AddTransaction />} />}
+//             <ProtectedRoute path="add" roles={["MANAGER"]} element = {<AddClaim />} />}
 //         />
 //         <Route path="/find" element = {
 //             <ProtectedRoute path="find" roles={["USER", "MANAGER"]} element = {
-//             <FindTransactionsPage searchTerm={searchTerm} setSearchTerm={setSearchTerm} /> }
+//             <FindClaimsPage searchTerm={searchTerm} setSearchTerm={setSearchTerm} /> }
 //           />
 //         } />
 //         <Route path="/find/:orderId" element = {<ProtectedRoute roles={["USER", "MANAGER"]}
