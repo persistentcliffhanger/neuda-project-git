@@ -3,13 +3,13 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 const Search = () => {
 
     const navigate = useNavigate();
-     
+    // const [searchParams] = useSearchParams();
 
   const handleSubmit = (event) => {
     event.preventDefault();
     let params = event.target.search.value;
       console.log("Params is equal to" + params);
-        navigate("/claimstable?search=" + params);
+        navigate("/searchresults?policy_number=" + params);
   };
 
   return (

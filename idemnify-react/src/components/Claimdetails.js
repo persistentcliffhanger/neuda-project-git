@@ -1,24 +1,22 @@
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import Infotablerows from "./Infotablerows";
-import { getAllClaimsAxiosVersion, getClaimDataAxiosVersion } from "./data/DataFunctions";
-
+import {
+  getAllClaimsAxiosVersion,
+  getClaimDataAxiosVersion,
+} from "./data/DataFunctions";
 
 const Claimdetails = () => {
   const [policy, setPolicy] = useState({});
 
-
-
   let [searchParams, setSearchParams] = useSearchParams();
-  
 
-  
   //console.log(searchTerm);
 
   const loadPolicy = (searchTerm) => {
-    getClaimDataAxiosVersion(searchTerm).then (result=>{setPolicy(result.data)}) 
-    
-   
+    getClaimDataAxiosVersion(searchTerm).then((result) => {
+      setPolicy(result.data);
+    });
   };
 
   useEffect(() => {
@@ -76,11 +74,7 @@ const Claimdetails = () => {
                 type="text"
                 id="policynum"
                 //Claim is updated the value is set to the policy number
-                value={
-                  policy[0] && policy[0].policy_number
-                    ? policy[0].policy_number
-                    : ""
-                }
+                value={policy.policy_number}
                 placeholder=""
                 className="text-sm text-gray-base w-full 
                               mr-3 py-5 px-4 h-2 border 
@@ -93,11 +87,7 @@ const Claimdetails = () => {
                 aria-label="Enter the policy holders name"
                 type="text"
                 id="name"
-                value={
-                  policy[0] && policy[0].customer_name
-                    ? policy[0].customer_name
-                    : ""
-                }
+                value={policy.customer_name}
                 placeholder="Policy holders name"
                 className="text-sm text-gray-base w-full mr-3 
                               py-5 px-4 h-2 border border-gray-200 
@@ -116,9 +106,7 @@ const Claimdetails = () => {
                 aria-label="Enter the policy number"
                 type="text"
                 id="claimtype"
-                value={
-                  policy[0] && policy[0].claim_type ? policy[0].claim_type : ""
-                }
+                value={policy.claim_type}
                 placeholder=""
                 className="text-sm text-gray-base w-full 
                               mr-3 py-5 px-4 h-2 border 
@@ -131,9 +119,7 @@ const Claimdetails = () => {
                 aria-label="Enter the policy number"
                 type="text"
                 id="claimdate"
-                value={
-                  policy[0] && policy[0].claim_date ? policy[0].claim_date : ""
-                }
+                value={policy.claim_date}
                 placeholder=""
                 className="text-sm text-gray-base w-full 
                               mr-3 py-5 px-4 h-2 border 
@@ -146,11 +132,7 @@ const Claimdetails = () => {
                 aria-label="Enter the policy number"
                 type="text"
                 id="estclaimamt"
-                value={
-                  policy[0] && policy[0].est_claim_amt
-                    ? policy[0].est_claim_amt
-                    : ""
-                }
+                value={policy.est_claim_amt}
                 placeholder=""
                 className="text-sm text-gray-base w-full 
                               mr-3 py-5 px-4 h-2 border 
@@ -163,7 +145,7 @@ const Claimdetails = () => {
                 aria-label="Enter the policy number"
                 type="text"
                 id="address"
-                value={policy[0] && policy[0].address ? policy[0].address : ""}
+                value={policy.address}
                 placeholder=""
                 className="text-sm text-gray-base w-full 
                               mr-3 py-5 px-4 h-2 border 
@@ -176,11 +158,7 @@ const Claimdetails = () => {
                 aria-label="Enter the policy number"
                 type="text"
                 id="make"
-                value={
-                  policy[0] && policy[0].vehicle_make
-                    ? policy[0].vehicle_make
-                    : ""
-                }
+                value={policy.vehicle_make}
                 placeholder=""
                 className="text-sm text-gray-base w-full 
                               mr-3 py-5 px-4 h-2 border 
@@ -193,11 +171,7 @@ const Claimdetails = () => {
                 aria-label="Enter the policy number"
                 type="text"
                 id="model"
-                value={
-                  policy[0] && policy[0].vehicle_model
-                    ? policy[0].vehicle_model
-                    : ""
-                }
+                value={policy.vehicle_model}
                 placeholder=""
                 className="text-sm text-gray-base w-full 
                               mr-3 py-5 px-4 h-2 border 
@@ -210,11 +184,7 @@ const Claimdetails = () => {
                 aria-label="Enter the policy number"
                 type="text"
                 id="vehicleyear"
-                value={
-                  policy[0] && policy[0].vehicle_year
-                    ? policy[0].vehicle_year
-                    : ""
-                }
+                value={policy.vehicle_year}
                 placeholder=""
                 className="text-sm text-gray-base w-full 
                               mr-3 py-5 px-4 h-2 border 
@@ -227,9 +197,7 @@ const Claimdetails = () => {
                 aria-label="Enter the policy number"
                 type="text"
                 id="pettype"
-                value={
-                  policy[0] && policy[0].pet_type ? policy[0].pet_type : ""
-                }
+                value={policy.pet_type}
                 placeholder=""
                 className="text-sm text-gray-base w-full 
                               mr-3 py-5 px-4 h-2 border 
@@ -243,9 +211,7 @@ const Claimdetails = () => {
                 type="text"
                 id="pet_
                 breed"
-                value={
-                  policy[0] && policy[0].pet_breed ? policy[0].pet_breed : ""
-                }
+                value={policy.pet_breed}
                 placeholder=""
                 className="text-sm text-gray-base w-full 
                               mr-3 py-5 px-4 h-2 border 
@@ -260,11 +226,7 @@ const Claimdetails = () => {
                 placeholder=""
                 id="claimdesc"
                 className="border border-gray-200 py-2 px-3 mt-2 formcolor rounded w-full"
-                value={
-                  policy[0] && policy[0].claim_description
-                    ? policy[0].claim_description
-                    : ""
-                }
+                value={policy.claim_description}
               ></textarea>
               <label htmlFor="claimreason" className="text-xs">
                 Claim reason
@@ -275,11 +237,7 @@ const Claimdetails = () => {
                 placeholder=""
                 id="claimreason"
                 className="border border-gray-200 py-2 px-3 mt-2 formcolor rounded w-full"
-                value={
-                  policy[0] && policy[0].claim_reason
-                    ? policy[0].claim_reason
-                    : ""
-                }
+                value={policy.claim_reason}
               ></textarea>
               <label htmlFor="claimstatus" className="text-xs">
                 Claim Status
@@ -288,11 +246,7 @@ const Claimdetails = () => {
                 aria-label="Enter the policy number"
                 type="text"
                 id="claimstate"
-                value={
-                  policy[0] && policy[0].claim_status
-                    ? policy[0].claim_status
-                    : ""
-                }
+                value={policy.claim_status}
                 placeholder=""
                 className="text-sm text-gray-base w-full 
                               mr-3 py-5 px-4 h-2 border 

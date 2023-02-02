@@ -33,6 +33,22 @@ export const getClaimDataAxiosVersion = (policyNumber) => {
   });
 };
 
+export const getClaimDataFromNameAxiosVersion = (customerName) => {
+  return axios({
+    url: "http://localhost:8080/api/claim?customer_name=" + customerName,
+    method: "GET",
+    headers: { Accept: "application/json" },
+  });
+};
+
+export const getClaimDataSearchByPolicyNumAxiosVersion = (policyNumber) => {
+  return axios({
+    url: "http://localhost:8080/api/claim?policy_number=" + policyNumber,
+    method: "GET",
+    headers: { Accept: "application/json" },
+  });
+};
+
 // export const getAllClaimsForId = (id) => {
 //   return axios({
 //     url: "http://localhost:8080/api/claim?order=" + id,

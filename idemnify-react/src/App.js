@@ -12,6 +12,7 @@ import ClaimsTable from "./components/Claimstable";
 // import Newclaim from "./components/Newclaim";
 import Purpose from "./components/Purpose";
 import AddClaim from "./components/Addclaim";
+import SearchResults from "./components/Searchresults";
 
 function App() {
   // const [searchTerm, setSearchTerm] = useState("");
@@ -28,6 +29,7 @@ function App() {
           <Route path="/allclaims" element={<Allclaims />} />
           <Route path="/about" element={<About />} />
           <Route path="/purpose" element={<Purpose />} />
+          <Route path="/searchresults" element={<SearchResults />} />
           <Route path="/" element={<Landing />} />
           <Route path="*" element={<Pagenotfound />} />
         </Routes>
