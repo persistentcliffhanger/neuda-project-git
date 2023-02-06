@@ -40,9 +40,11 @@ const Claimdetails = () => {
           >
             <form className="addTransactionsForm">
               <nav classname="">
-                <button id="reject"
+                <button
+                  id="reject"
                   onClick={buttonClick}
                   type="submit"
+                  value={policy.reject}
                   className="bg-black text-white hover:bg-gray-400 w-1/4 mt-4"
                 >
                   Reject
