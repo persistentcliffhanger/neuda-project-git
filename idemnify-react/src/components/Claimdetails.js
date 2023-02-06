@@ -24,6 +24,12 @@ const Claimdetails = () => {
     loadPolicy(searchTerm);
   }, []);
   console.log(policy);
+
+  const buttonClick = () => {
+    document.getElementById("reject").className = "text-white hover:bg-gray-400 w-1/4 mt-4";
+
+  };
+
   return (
     <div className="Newquikclaim">
       <div className="container flex lg mx-auto overflow-x-hidden bg-white">
@@ -34,7 +40,8 @@ const Claimdetails = () => {
           >
             <form className="addTransactionsForm">
               <nav classname="">
-                <button
+                <button id="reject"
+                  onClick={buttonClick}
                   type="submit"
                   className="bg-black text-white hover:bg-gray-400 w-1/4 mt-4"
                 >
