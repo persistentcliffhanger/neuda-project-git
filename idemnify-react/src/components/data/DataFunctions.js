@@ -49,6 +49,14 @@ export const getClaimDataSearchByPolicyNumAxiosVersion = (policyNumber) => {
   });
 };
 
+export const getClaimDataSearchByCustomerNameAxiosVersion = (customerName) => {
+  return axios({
+    url: "http://localhost:8080/api/claim?customer_name=" + customerName,
+    method: "GET",
+    headers: { Accept: "application/json" },
+  });
+};
+
 // export const getAllClaimsForId = (id) => {
 //   return axios({
 //     url: "http://localhost:8080/api/claim?order=" + id,
@@ -74,8 +82,8 @@ export const addNewClaim = (claim) => {
     url: "http://localhost:8080/api/claim",
     method: "POST",
     headers: { Accept: "application/json", "Content-Type": "application/json" },
-    data: claim,
-  });
+    data: { claim }
+  })
 };
 
 // export const login = (username, password) => {

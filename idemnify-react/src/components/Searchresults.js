@@ -3,31 +3,59 @@ import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 // import Claimsrow from "./claimsrow.js";
 
-import { getClaimDataSearchByPolicyNumAxiosVersion } from "./data/DataFunctions";
+import { getClaimDataSearchByPolicyNumAxiosVersion , getClaimDataFromNameAxiosVersion} from "./data/DataFunctions";
 import { useNavigate } from "react-router-dom";
 
 const SearchResults = (event) => {
   const [policy, setPolicy] = useState({});
 
-  let [searchParams, setSearchParams] = useSearchParams();
+    let [searchParams, setSearchParams] = useSearchParams();
+    
 
-  const loadPolicy = (policyNumber) => {
-    getClaimDataSearchByPolicyNumAxiosVersion(policyNumber).then((result) => {
-      setPolicy(result.data);
-    });
-  };
+    // if (searchParams.get("policy_number") != null) {
+    //     console.log("Policy Number is not null");
 
-  useEffect(() => {
-    const policyNumber = searchParams.get("policy_number");
-    console.log(policyNumber);
-    loadPolicy(policyNumber);
-  }, [searchParams]);
-  console.log(policy);
+        const loadPolicy = (policyNumber) => {
+            getClaimDataSearchByPolicyNumAxiosVersion(policyNumber).then((result) => {
+                setPolicy(result.data);
+            });
+        };
 
-  const navigate = useNavigate();
-  const onRowClick = () => {
-    navigate("/claimdetails?policy_number=" + policy.policy_number);
-  };
+        useEffect(() => {
+            const policyNumber = searchParams.get("policy_number");
+            console.log(policyNumber);
+            loadPolicy(policyNumber);
+        }, [searchParams]);
+        console.log(policy);
+
+        const navigate = useNavigate();
+        const onRowClick = () => {
+            navigate("/claimdetails?policy_number=" + policy.policy_number);
+        };
+
+
+    // } else if (searchParams.get("customer_name") != null) {
+    //     const loadPolicy = (customerName) => {
+    //         getClaimDataFromNameAxiosVersion(customerName).then((result) => {
+    //           setPolicy(result.data);
+    //         });
+    //     };
+        
+    //     useEffect(() => {
+    //       const customerName = searchParams.get("customer_name");
+    //       console.log(customerName);
+    //       loadPolicy(customerName);
+    //     }, [searchParams]);
+    //     console.log(policy);
+
+    //     const navigate = useNavigate();
+    //     const onRowClick = () => {
+    //       navigate("/claimdetails?customer_name=" + policy.customer_name);
+    //     };
+        
+    // }
+
+
 
   return (
     <>
@@ -62,7 +90,8 @@ const SearchResults = (event) => {
           </thead>
           <tbody
             className="bg-white border-b transition duration-300 ease-in-out hover:bg-gray-800 hover:text-white"
-            git onClick={() => onRowClick()}
+            git
+            onClick={() => onRowClick()}
           >
             <td className="lg:table-cell text-center ">
               {policy.policy_number}

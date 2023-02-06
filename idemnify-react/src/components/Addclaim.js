@@ -36,15 +36,15 @@ const AddClaim = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
     setMessage("..updating");
-    addNewClaim(newClaim);
-    console.log(newClaim);
-    const response = addNewClaim(newClaim);
-    response
-      .then((result) => {
-        if (result.status === 200) {
-          setMessage("new Claim added");
+    addNewClaim(newClaim)
+    // console.log(newClaim);
+    // const response = addNewClaim(newClaim);
+    // response
+      .then((response) => {
+        if (response.status === 200) {
+          setMessage("new Claim added with id " + response.data.id);
         } else {
-          setMessage("something went wrong - error code was " + result.status);
+          setMessage("something went wrong - error code was " + response.status);
         }
       })
       .catch((error) => console.log("something went wrong ", error));
@@ -54,25 +54,7 @@ const AddClaim = () => {
     dispatch({ field: event.target.id, value: event.target.value });
   };
 
-  // const {
-  //   policy_number,
-  //   customer_name,
-  //   claim_type,
-  //   claim_date,
-  //   est_claim_amt,
-  //   address,
-  //   vehicle_make,
-  //   vehicle_model,
-  //   vehicle_year,
-  //   pet_type,
-  //   pet_breed,
-  //   claim_description,
-  //   claim_reason,
-  //   claim_status,
-  //   image_1,
-  // } = newClaim;
-
-  // Selective Content Rendering
+ 
 
   const [insurancetype, setinsurancetype] = useState("");
   const insurancepolicytype = () => {
