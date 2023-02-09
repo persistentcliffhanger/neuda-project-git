@@ -3,59 +3,57 @@ import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 // import Claimsrow from "./claimsrow.js";
 
-import { getClaimDataSearchByPolicyNumAxiosVersion , getClaimDataFromNameAxiosVersion} from "./data/DataFunctions";
+import { getClaimDataSearchBySearchTermAxiosVersion } from "./data/DataFunctions";
 import { useNavigate } from "react-router-dom";
 
 const SearchResults = (event) => {
   const [policy, setPolicy] = useState({});
 
-    let [searchParams, setSearchParams] = useSearchParams();
-    
+  let [searchParams, setSearchParams] = useSearchParams();
 
-    // if (searchParams.get("policy_number") != null) {
-    //     console.log("Policy Number is not null");
+  // if (searchParams.get("policy_number") != null) {
+  //     console.log("Policy Number is not null");
 
-        const loadPolicy = (policyNumber) => {
-            getClaimDataSearchByPolicyNumAxiosVersion(policyNumber).then((result) => {
-                setPolicy(result.data);
-            });
-        };
+  const loadPolicy = (policyNumber) => {
+    getClaimDataSearchBySearchTermAxiosVersion(policyNumber).then((result) => {
+      if (result.data.length > 0) {
+        setPolicy(result.data[0]);
+      }
+    });
+  };
 
-        useEffect(() => {
-            const policyNumber = searchParams.get("policy_number");
-            console.log(policyNumber);
-            loadPolicy(policyNumber);
-        }, [searchParams]);
-        console.log(policy);
+  useEffect(() => {
+    const policyNumber = searchParams.get("policy_number");
+    console.log(policyNumber);
+    loadPolicy(policyNumber);
+  }, [searchParams]);
+  console.log(policy);
 
-        const navigate = useNavigate();
-        const onRowClick = () => {
-            navigate("/claimdetails?policy_number=" + policy.policy_number);
-        };
+  const navigate = useNavigate();
+  const onRowClick = () => {
+    navigate("/claimdetails?policy_number=" + policy.policy_number);
+  };
 
+  // } else if (searchParams.get("customer_name") != null) {
+  //     const loadPolicy = (customerName) => {
+  //         getClaimDataFromNameAxiosVersion(customerName).then((result) => {
+  //           setPolicy(result.data);
+  //         });
+  //     };
 
-    // } else if (searchParams.get("customer_name") != null) {
-    //     const loadPolicy = (customerName) => {
-    //         getClaimDataFromNameAxiosVersion(customerName).then((result) => {
-    //           setPolicy(result.data);
-    //         });
-    //     };
-        
-    //     useEffect(() => {
-    //       const customerName = searchParams.get("customer_name");
-    //       console.log(customerName);
-    //       loadPolicy(customerName);
-    //     }, [searchParams]);
-    //     console.log(policy);
+  //     useEffect(() => {
+  //       const customerName = searchParams.get("customer_name");
+  //       console.log(customerName);
+  //       loadPolicy(customerName);
+  //     }, [searchParams]);
+  //     console.log(policy);
 
-    //     const navigate = useNavigate();
-    //     const onRowClick = () => {
-    //       navigate("/claimdetails?customer_name=" + policy.customer_name);
-    //     };
-        
-    // }
+  //     const navigate = useNavigate();
+  //     const onRowClick = () => {
+  //       navigate("/claimdetails?customer_name=" + policy.customer_name);
+  //     };
 
-
+  // }
 
   return (
     <>

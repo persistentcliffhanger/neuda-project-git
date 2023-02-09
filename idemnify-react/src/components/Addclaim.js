@@ -1,5 +1,4 @@
 import { useReducer, useState } from "react";
-// import { addNewClaim } from "./data/ClaimData.js";
 import { addNewClaim } from "./data/DataFunctions.js";
 import reflect from "./images/reflect.jpg";
 
