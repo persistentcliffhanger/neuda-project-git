@@ -86,4 +86,3 @@ export const updateClaim = (id, claim) => {
     data: claim,
   });
 };
-
