@@ -67,27 +67,6 @@ export const getClaimDataSearchBySearchTermAxiosVersion = (searchTerm) => {
   });
 };
 
-// export const getClaimsWithRejectedStatusAxiosVersion = (searchTerm) => {
-//   return axios({
-//     url: "http://localhost:8080/api/claim?searchterm=" + searchTerm,
-//     method: "GET",
-//     headers: { Accept: "application/json" },
-//   });
-// };
-
-// //add Claim:  POST /api/claim
-// //update            PUT /api/claim/142645
-
-// export const addNewClaim = (claim) => {
-//   console.log(claim);
-//   return axios({
-//     url: "http://localhost:8080/api/claim",
-//     method: "POST",
-//     headers: { Accept: "application/json", "Content-Type": "application/json" },
-//     data: { claim: claim },
-//   });
-// };
-
 export const addNewClaim = (claim) => {
   console.log(claim);
   return axios({
@@ -97,15 +76,6 @@ export const addNewClaim = (claim) => {
     data: claim,
   });
 };
-// export const updateClaim = (id, claim) => {
-//   console.log(id, claim);
-//   return axios({
-//     url: "http://localhost:8080/api/claim/id/" + id,
-//     method: "PUT",
-//     headers: { Accept: "application/json", "Content-Type": "application/json" },
-//     data: claim,
-//   });
-// };
 
 export const updateClaim = (id, claim) => {
   console.log("updating claim");

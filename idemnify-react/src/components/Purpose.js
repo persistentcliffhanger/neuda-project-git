@@ -1,4 +1,3 @@
-import RobCoulter from "./images/RobCoulter-2.jpg";
 import PurposeImage from "./images/purpose_image.png";
 import "../App.css";
 

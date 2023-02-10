@@ -1,4 +1,3 @@
-// import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Claimsrow = (props) => {
@@ -25,7 +24,6 @@ const Claimsrow = (props) => {
   const onRowClick = (props) => {
     let policy_number = props.policy_number;
     console.log("Policy Number ", policy_number);
-    // console.log("Customer Name:", props.customer_name);
 
     navigate("/claimdetails?policy_number=" + policy_number);
   };

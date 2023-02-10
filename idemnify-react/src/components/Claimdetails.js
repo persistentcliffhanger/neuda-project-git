@@ -9,8 +9,6 @@ const Claimdetails = () => {
 
   let [searchParams, setSearchParams] = useSearchParams();
 
-  //console.log(searchTerm);
-
   const loadPolicy = (searchTerm) => {
     getClaimDataAxiosVersion(searchTerm).then((result) => {
       setPolicy(result.data);

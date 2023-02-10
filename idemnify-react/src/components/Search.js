@@ -3,7 +3,7 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 const Search = () => {
 
     const navigate = useNavigate();
-    // const [searchParams] = useSearchParams();
+    
 
   const handleSubmit = (event) => {
     event.preventDefault();

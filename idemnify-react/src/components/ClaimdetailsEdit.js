@@ -27,13 +27,6 @@ console.log("This is the id: ", id);
   }, []);
   console.log(policy);
   
-
-  // const buttonClick = () => {
-  //   document.getElementById("reject").className =
-  //     "text-white hover:bg-gray-400 w-1/4 mt-4";
-  // };
-
-  // const AddClaim = () => {
   const initialNewClaimState = {
     policy_number: policy.policy_number,
     customer_name: policy.customer_name,
@@ -61,8 +54,6 @@ console.log("This is the id: ", id);
     };
   };
 
-  // const [claim1, setClaim1] = useState(initialNewClaimState);
-
   const [claimEdit, dispatch] = useReducer(formReducer, initialNewClaimState);
 
   const handleSubmit = (event) => {
@@ -72,8 +63,6 @@ console.log("This is the id: ", id);
     updateClaim(id, claimEdit)
     console.log("this is the claimedit ",claimEdit);
       console.log("This is the policy id " ,policy.id)
-      // const response = addNewClaim(newClaim);
-      // response
       .then((response) => {
         if (response.status === 200) {
           setMessage("claim updated for id " + response.data.id);
@@ -99,35 +88,6 @@ console.log("This is the id: ", id);
                     items-center justify-center"
           >
             <form className="updateClaimForm" onSubmit={handleSubmit}>
-              {/* <nav classname="">
-                <button
-                  id="reject"
-                  // onClick={buttonClick}
-                  type="submit"
-                  value={policy.reject}
-                  className="bg-black text-white hover:bg-gray-400 w-1/4 mt-4"
-                >
-                  Reject
-                </button>
-                <button
-                  type="submit"
-                  className="bg-black text-white hover:bg-gray-400 w-1/4 mt-4"
-                >
-                  Push
-                </button>
-                <button
-                  type="submit"
-                  className="bg-black text-white hover:bg-gray-400 w-1/4 mt-4 "
-                >
-                  Accept
-                </button>
-                <button
-                  type="submit"
-                  className="bg-black text-white hover:bg-gray-400 w-1/4 mt-4 "
-                >
-                  In Progress
-                </button>
-              </nav> */}
               <p
                 className="text-red-600 font-bold text-xl flex flex-col 
                     items-center justify-center mt-12 mb-12"
@@ -141,7 +101,6 @@ console.log("This is the id: ", id);
                 aria-label="Enter the policy number"
                 type="text"
                 id="policynum"
-                //Claim is updated the value is set to the policy number
                 value={claimEdit.policy_number}
                 onChange={handleChange}
                 placeholder={policy.policy_number}
@@ -163,12 +122,6 @@ console.log("This is the id: ", id);
                               py-5 px-4 h-2 border border-red-600 
                               rounded mb-2"
               />
-              {/* <button
-                // onClick={() => setclaimFieldValue.policy_number()}
-                className="bg-gray-600 text-white hover:bg-gray-400 w-1/2 mt-4"
-              >
-                Update
-              </button> */}
               <label htmlFor="claimtype" className="text-xs">
                 Claim Type
               </label>

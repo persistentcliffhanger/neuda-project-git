@@ -35,21 +35,6 @@ const ClaimsTable = () => {
     
   }, [searchParams]);
 
-  // const loadClaim = (searchTerm) => {
-  //   const searchedClaim = claimdata.filter((eachClaim) => {
-  //     return (
-  //       eachClaim.claim_type.toLowerCase().includes(searchTerm.toLowerCase()) ||
-  //       eachClaim.claim_status
-  //         .toLowerCase()
-  //         .includes(searchTerm.toLowerCase()) ||
-  //       eachClaim.address.toLowerCase().includes(searchTerm.toLowerCase()) ||
-  //       eachClaim.policy_number === +searchTerm ||
-  //       eachClaim.claim_date.includes(searchTerm) ||
-  //       eachClaim.customer_name.toLowerCase().includes(searchTerm.toLowerCase())
-  //     );
-  //   });
-  //   setClaims(searchedClaim);
-  // };
 
   return (
     <>
