@@ -1,7 +1,6 @@
 import "../Claims.css";
 import { useState, useEffect } from "react";
-import { useSearchParams } from "react-router-dom";
-// import Claimsrow from "./claimsrow.js";
+import { useSearchParams } from "react-router-dom"; 
 
 import { getClaimDataSearchBySearchTermAxiosVersion } from "./data/DataFunctions";
 import { useNavigate } from "react-router-dom";
@@ -10,9 +9,6 @@ const SearchResults = (event) => {
   const [policy, setPolicy] = useState({});
 
   let [searchParams, setSearchParams] = useSearchParams();
-
-  // if (searchParams.get("policy_number") != null) {
-  //     console.log("Policy Number is not null");
 
   const loadPolicy = (policyNumber) => {
     getClaimDataSearchBySearchTermAxiosVersion(policyNumber).then((result) => {
@@ -34,26 +30,6 @@ const SearchResults = (event) => {
     navigate("/claimdetails?policy_number=" + policy.policy_number);
   };
 
-  // } else if (searchParams.get("customer_name") != null) {
-  //     const loadPolicy = (customerName) => {
-  //         getClaimDataFromNameAxiosVersion(customerName).then((result) => {
-  //           setPolicy(result.data);
-  //         });
-  //     };
-
-  //     useEffect(() => {
-  //       const customerName = searchParams.get("customer_name");
-  //       console.log(customerName);
-  //       loadPolicy(customerName);
-  //     }, [searchParams]);
-  //     console.log(policy);
-
-  //     const navigate = useNavigate();
-  //     const onRowClick = () => {
-  //       navigate("/claimdetails?customer_name=" + policy.customer_name);
-  //     };
-
-  // }
 
   return (
     <>

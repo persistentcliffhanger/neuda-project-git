@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import Infotablerows from "./Infotablerows";
-import {
-  getClaimDataAxiosVersion,
-} from "./data/DataFunctions";
+import { getClaimDataAxiosVersion } from "./data/DataFunctions";
+import { useNavigate } from "react-router-dom";
 
 const Claimdetails = () => {
   const [policy, setPolicy] = useState({});
@@ -17,6 +16,7 @@ const Claimdetails = () => {
       setPolicy(result.data);
     });
   };
+  const navigate = useNavigate();
 
   useEffect(() => {
     const searchTerm = searchParams.get("policy_number");
@@ -25,9 +25,18 @@ const Claimdetails = () => {
   }, []);
   console.log(policy);
 
-  const buttonClick = () => {
-    document.getElementById("reject").className = "text-white hover:bg-gray-400 w-1/4 mt-4";
+  const onEditClick = () => {
+    console.log(
+      "Navigating to Edit Page for Policy Number ",
+      policy.policy_number
+    );
 
+    navigate("/claimdetailsedit?policy_number=" + policy.policy_number);
+  };
+
+  const buttonClick = () => {
+    document.getElementById("reject").className =
+      "text-white hover:bg-gray-400 w-1/4 mt-4";
   };
 
   return (
@@ -74,6 +83,7 @@ const Claimdetails = () => {
               >
                 Claim Details
               </p>
+
               <label htmlFor="policynum" className="text-xs">
                 Policy Number
               </label>
@@ -101,12 +111,7 @@ const Claimdetails = () => {
                               py-5 px-4 h-2 border border-gray-200 
                               rounded mb-2"
               />
-              {/* <button
-                // onClick={() => setclaimFieldValue.policy_number()}
-                className="bg-gray-600 text-white hover:bg-gray-400 w-1/2 mt-4"
-              >
-                Update
-              </button> */}
+
               <label htmlFor="claimtype" className="text-xs">
                 Claim Type
               </label>
@@ -272,13 +277,15 @@ const Claimdetails = () => {
                 className="border-4 border-red-200  py-2 px-3 mt-2 formcolor rounded w-full"
                 value=""
               ></textarea>
-              <button
-                type="submit"
-                className="bg-red-400 text-white hover:bg-gray-400 w-full mt-12 mb-12 py-3 rounded font-bold"
-              >
-                Update
-              </button>
             </form>
+
+            <button
+              type="submit"
+              onClick={onEditClick}
+              className="bg-red-400 text-white hover:bg-gray-400 w-full mt-12 mb-12 py-3 rounded font-bold"
+            >
+              Edit
+            </button>
           </div>
           <Infotablerows />
         </div>
